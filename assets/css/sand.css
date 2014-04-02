@@ -55,57 +55,131 @@ Description: Styling to handle the framework
 .spine-bookmark {
 	display:none;
 }
-.tooltip {
-	display:none;
+/*
+Title: Page elements 
+Description: Elements to create a unified page with a single presentation of content
+*/
+.headbg {
+	background-image: url('/wp-content/themes/wsu-healthcare/assets/images/elements/counties.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 170% auto;
+}
+.size-lt-medium .stardust p {
+	margin-left:16px;
+	margin-right:16px;
+}
+.size-lt-medium .stardust h1 {
+	margin-left:16px;
+	margin-right:16px;
+		}
+.size-lt-medium .stardust h2 {
+margin-left:16px;
+margin-right:16px;
+}
+/*******************
+Target sectional elements
+*/
+.stardust {
+	background-color: #585858;
+	color:white;
+}
+.stardust p {
+	font-size:1.8em;
+}
+.stardust h1 {
+	margin-top:1em;
+	}
+.stardust h2 {
+	border-top: dashed 1px white;
+	border-bottom: dashed 1px white;
+	}
+.stardust h3 {
 	text-align: center;
-	color: #242424;
-	max-width: 200px;
-	min-height: 30px;
-	position: absolute;
-	top:-999em;
-	left:-99em;
-	background: #ffffff;
-	border: 1px solid #6d6d6d;
-	margin: 4px 4px 12px 4px;
-	padding: 5px;
-	border-radius: 5px;
-	z-index:99199;
 }
-.tooltip:after, .tooltip:before {
-	top: 100%;
-	left: 50%;
-	border: solid transparent;
-	content: " ";
-	height: 0;
-	width: 0;
-	position: absolute;
-	pointer-events: none;
+.stardust-twenty {
+	background-color:#767676;
+	color:white;
 }
-.tooltip:after {
-	border-top-color: #ffffff;
-	border-width: 8px;
-	margin-left: -8px;
+.stardust-twenty h2 {
+	border-top: dashed 1px white;
+	border-bottom: dashed 1px white;
+	}
+.accessory {
+	margin-top:3em;
+	margin-bottom:3em;
 }
-.tooltip:before {
-	border-top-color: #6d6d6d;
-	border-width: 9px;
-	margin-left: -9px;
+.accessory ul {
+	margin-top:6px;
 }
-.tooltip h3, .tooltip h4 {
-	color:#5e6a71;
+.accessory ul li {
+	padding-bottom:0;
+	list-style: none;
+	margin-left:0;
 }
-.tooltip h3 {
-  background-color: rgba(247,247,247,0.75);
+.crimson {
+	color:#981e32;
 }
-.tooltip h4 {
-	font-size:1.1em;
-	text-transform: capitalize;
-	font-weight: normal;
+.crimsonBB {
+	border-bottom:solid 16px #981e32;
+}
+.pic1, .pic2, .pic3 {
+	width:100%;
+	height:30em;
+	}
+.size-lt-medium .pic1{
+	height:15em;
+}
+.size-lt-medium .pic3 {
+	height:15em;
+}
+.size-lt-medium .pic2 {
+	height:15em;
+}
+.pic1 {
+	background-image: url('/wp-content/themes/wsu-healthcare/assets/images/elements/spokaneCampus.jpg');
+	background-size:100% auto;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+}
+.pic2 {
+	background-image: url('/wp-content/themes/wsu-healthcare/assets/images/elements/nursingStevens.jpg');
+	background-size:100% auto;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+}
+.pic3 {
+	background-image: url('/wp-content/themes/wsu-healthcare/assets/images/elements/farmerSon.jpg');
+	background-size:100% auto;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+}
+footer {
+	font-size: 90%;
+	text-align: center;
+	margin-bottom:1em;
 }
 /*
-Title: WA SVG MAP
-Description: SVG map of WA elements seperate counties for easy individual targeting
+Title: Graphs and Maps
+Description: Graph elements to control the colors, lines, and functions
 */
+/********************
+  Map
+*/
+#svg-wa-map {
+	position:relative;
+	width:100%;
+	height:auto;
+	margin-top:3em;
+	margin-bottom:3em;
+}
+#svg-wa-map svg {
+	overflow: hidden;
+	display:block;
+}
+.counties h3 {
+	background-color: rgba(247,247,247,0.75);
+}
 .counties {
 	fill:#F26D4E;
 	stroke:#5E6A71;
@@ -178,125 +252,57 @@ Description: SVG map of WA elements seperate counties for easy individual target
 .labelHigh {
 	background-color:#F26D4E;
 }
-/*
-Title: Homepage 
-Description: Elements to create a unified page with a single presentation of content
-*/
-.headbg {
-	background-image: url('../images/elements/counties.png');
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 170% auto;
-	border-bottom:solid 16px #981e32;
-}
-.size-lt-medium .stardust p {
-	margin-left:16px;
-	margin-right:16px;
-}
-.size-lt-medium .stardust h1 {
-	margin-left:16px;
-	margin-right:16px;
-		}
-.size-lt-medium .stardust h2 {
-margin-left:16px;
-margin-right:16px;
-}
-/*******************/
-.stardust {
-	background-color: #585858;
-	color:white;
-}
-.stardust h1 {
-	margin-top:1em;
-	}
-.stardust h2 {
-	border-top: dashed 1px white;
-	border-bottom: dashed 1px white;
-	}
-.stardust h3 {
+.tooltip {
+	display:none;
 	text-align: center;
+	color: #5e6a71;
+	max-width: 300px;
+	min-height: 30px;
+	position: absolute;
+	top:-999em;
+	left:-99em;
+	background: #fff;
+	border: 1px solid #5e6a71;
+	margin: 4px 4px 12px 4px;
+	padding: 8px;
+	border-radius: 5px;
+	z-index:99199;
 }
-.stardust-twenty {
-	background-color:#767676;
-	color:white;
+.tooltip:after, .tooltip:before {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
 }
-.stardust-twenty h2 {
-	border-top: dashed 1px white;
-	border-bottom: dashed 1px white;
-	}
-.accessory {
-	margin-top:3em;
-	margin-bottom:3em;
+.tooltip:after {
+	border-top-color: #ffffff;
+	border-width: 8px;
+	margin-left: -8px;
 }
-.accessory ul {
-	margin-top:6px;
+.tooltip:before {
+	border-top-color: #6d6d6d;
+	border-width: 9px;
+	margin-left: -9px;
 }
-.accessory ul li {
-	padding-bottom:0;
-	list-style: none;
-	margin-left:0;
+.tooltip h3, .tooltip h4 {
+	color:#5e6a71;
 }
-.crimson {
-	color:#981e32;
+.tooltip h3 {
+  background-color: rgba(247,247,247,0.75);
+  font-size:1.2em;
 }
-.crimsonBB {
-	border-bottom:solid 16px #981e32;
-}
-.pic1, .pic2, .pic3 {
-	width:100%;
-	height:30em;
-	}
-.size-lt-medium .pic1{
-	height:15em;
-}
-.size-lt-medium .pic3 {
-	height:15em;
-}
-.size-lt-medium .pic2 {
-	height:15em;
-}
-.pic1 {
-	background-image: url('../images/elements/spokaneCampus.jpg');
-	background-size:100% auto;
-	background-position: 0 0;
-	background-repeat: no-repeat;
-}
-.pic2 {
-	background-image: url('../images/elements/nursingStevens.jpg');
-	background-size:100% auto;
-	background-position: 0 0;
-	background-repeat: no-repeat;
-}
-.pic3 {
-	background-image: url('../images/elements/farmerSon.jpg');
-	background-size:100% auto;
-	background-position: 0 0;
-	background-repeat: no-repeat;
-}
-footer {
-	font-size: 80%;
-	text-align: center;
-	margin-bottom:1em;
-}
-/*
-Title: Graphs
-Description: Graph elements to control the colors, lines, and functions
-*/
-#svg-wa-map {
-	position:relative;
-	width:100%;
-	height:auto;
+.tooltip h4 {
+	font-size:1.1em;
+	text-transform: capitalize;
+	font-weight: normal;
 	display:block;
-}
-#svg-wa-map svg {
-	overflow: hidden;
-}
-.counties h3 {
-	background-color: rgba(247,247,247,0.75);
 }
 #rdRatio {
 	margin-top:5%;
-	margin-bottom: 5%;
 	text-align: center;
 }
 #rdRatio h3 {
@@ -367,7 +373,6 @@ Description: Graph elements to control the colors, lines, and functions
   padding: 0;
   overflow: hidden;
 }
-
 /********************
   Box shadow and border radius styling
 */
@@ -380,11 +385,9 @@ Description: Graph elements to control the colors, lines, and functions
   -moz-border-radius: 6px;
   border-radius: 6px;
 }
-
 /********************
- * TOOLTIP CSS
+ * TOOLTIP CSS for SVG graphs
  */
-
 .nvtooltip {
   position: absolute;
   background-color: rgba(255,255,255,1.0);
@@ -406,8 +409,7 @@ Description: Graph elements to control the colors, lines, and functions
   -ms-user-select: none;
   user-select: none;
 }
-
-/*Give tooltips that old fade in transition by
+/* Give tooltips that old fade in transition by
     putting a "with-transitions" class on the container div.
 */
 .nvtooltip.with-transitions, .with-transitions .nvtooltip {
@@ -434,29 +436,23 @@ Description: Graph elements to control the colors, lines, and functions
   text-align: center;
 
   border-bottom: 1px solid #ebebeb;
-
   -webkit-border-radius: 5px 5px 0 0;
   -moz-border-radius: 5px 5px 0 0;
   border-radius: 5px 5px 0 0;
 }
-
 .nvtooltip p {
   margin: 0;
   padding: 5px 14px;
   text-align: center;
 }
-
 .nvtooltip span {
   display: inline-block;
   margin: 2px 0;
 }
-
 .nvtooltip table {
   margin: 6px;
   border-spacing:0;
 }
-
-
 .nvtooltip table td {
   padding: 2px 9px 2px 0;
   vertical-align: middle;
@@ -469,7 +465,6 @@ Description: Graph elements to control the colors, lines, and functions
   text-align: right;
   font-weight: bold;
 }
-
 .nvtooltip table tr.highlight td {
   padding: 1px 9px 1px 0;
   border-bottom-style: solid;
@@ -477,30 +472,22 @@ Description: Graph elements to control the colors, lines, and functions
   border-top-style: solid;
   border-top-width: 1px;
 }
-
 .nvtooltip table td.legend-color-guide div {
   width: 8px;
   height: 8px;
   vertical-align: middle;
 }
-
 .nvtooltip .footer {
   padding: 3px;
   text-align: center;
 }
-
-
 .nvtooltip-pending-removal {
   position: absolute;
   pointer-events: none;
 }
-
-
 /********************
  * SVG CSS
  */
-
-
 svg {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -513,17 +500,13 @@ svg {
   width:100%;
   height:100%;
 }
-
-
 svg text {
   font: normal 10px #5E6A71;
   padding:8px;
 }
-
 svg .title {
  font: bold 10px #5E6A71;
 }
-
 .nvd3 .nv-background {
   fill: white;
   fill-opacity: 0;
@@ -531,40 +514,27 @@ svg .title {
   pointer-events: none;
   */
 }
-
 .nvd3.nv-noData {
   font-size: 10px;
   font-weight: normal;
 }
-
-
 /**********
 *  Brush
 */
-
 .nv-brush .extent {
   fill-opacity: .125;
   shape-rendering: crispEdges;
 }
-
-
-
 /**********
 *  Legend
 */
-
 .nvd3 .nv-legend .nv-series {
   cursor: pointer;
   font-size:.875em;
 }
-
 .nvd3 .nv-legend .disabled circle {
   fill-opacity: 0;
-  \
 }
-
-
-
 /**********
 *  Axes
 */
@@ -578,52 +548,39 @@ svg .title {
   stroke-opacity: .75;
   shape-rendering: crispEdges;
 }
-
 .nvd3 .nv-axis path.domain {
   stroke-opacity: .75;
 }
-
 .nvd3 .nv-axis.nv-x path.domain {
   stroke-opacity: 0;
 }
-
 .nvd3 .nv-axis line {
   fill: none;
   stroke: #5E6A71;
   shape-rendering: crispEdges;
 }
-
 .nvd3 .nv-axis .zero line,
 /*this selector may not be necessary*/ .nvd3 .nv-axis line.zero {
   stroke-opacity: .75;
 }
-
 .nvd3 .nv-axis .nv-axisMaxMin text {
   font-weight: normal;
 }
-
 .nvd3 .x  .nv-axis .nv-axisMaxMin text,
 .nvd3 .x2 .nv-axis .nv-axisMaxMin text,
 .nvd3 .x3 .nv-axis .nv-axisMaxMin text {
   text-anchor: middle
 }
-
-
-
 /**********
 *  Brush
 */
-
 .nv-brush .resize path {
   fill: #eee;
   stroke:#5E6A71;
 }
-
-
 /**********
 *  Bars
 */
-
 .nvd3 .nv-multibar .nv-groups rect,
 .nvd3 .nv-multibarHorizontal .nv-groups rect,
 .nvd3 .nv-discretebar .nv-groups rect {
@@ -633,13 +590,11 @@ svg .title {
   -moz-transition: fill-opacity 250ms linear;
   -webkit-transition: fill-opacity 250ms linear;
 }
-
 .nvd3 .nv-multibar .nv-groups rect:hover,
 .nvd3 .nv-multibarHorizontal .nv-groups rect:hover,
 .nvd3 .nv-discretebar .nv-groups rect:hover {
   fill-opacity: 1;
 }
-
 .nvd3 .nv-discretebar .nv-groups text,
 .nvd3 .nv-multibarHorizontal .nv-groups text {
   font-weight: normal;
@@ -652,7 +607,6 @@ svg .title {
 /***********
 *  Pie Chart
 */
-
 .nvd3.nv-pie path {
   stroke-opacity: 0;
   transition: fill-opacity 250ms linear, stroke-width 250ms linear, stroke-opacity 250ms linear;
@@ -660,18 +614,15 @@ svg .title {
   -webkit-transition: fill-opacity 250ms linear, stroke-width 250ms linear, stroke-opacity 250ms linear;
 
 }
-
 .nvd3.nv-pie .nv-slice text {
   stroke: #5E6A71;
   stroke-width: 0;
 }
-
 .nvd3.nv-pie path {
   stroke: #fff;
   stroke-width: 1px;
   stroke-opacity: 1;
 }
-
 .nvd3.nv-pie .hover path {
   fill-opacity: .7;
 }
@@ -695,38 +646,32 @@ svg .title {
 /**********
 * Parallel Coordinates
 */
-
 .nvd3 .background path {
   fill: none;
   stroke: #5E6A71;
   stroke-opacity: .4;
   shape-rendering: crispEdges;
 }
-
 .nvd3 .foreground path {
   fill: none;
   stroke: #5E6A71;
   stroke-opacity: .7;
 }
-
 .nvd3 .brush .extent {
   fill-opacity: .3;
   stroke: #fff;
   shape-rendering: crispEdges;
 }
-
 .nvd3 .axis line, .axis path {
   fill: none;
   stroke: #000;
   shape-rendering: crispEdges;
 }
-
 .nvd3 .axis text {
   text-shadow: 0 1px 0 #fff;
 }
-
 /****
-Interactive Layer
+Interactive Layers
 */
 .nvd3 .nv-interactiveGuideLine {
   pointer-events:none;
