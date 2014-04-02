@@ -66,6 +66,6 @@
 
 <body <?php body_class(); ?>>
 
-<div id="jacket" class="spineless">
+<div id="jacket">
 <!-- Accent banner to stretch across the page -->
 <div id="binder" class="<?php echo $grid_style; echo $large_format; ?>">

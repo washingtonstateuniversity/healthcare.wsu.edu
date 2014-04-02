@@ -13,44 +13,65 @@ Description: Styling to handle the framework
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
  }
+ .size-gt-medium .recto.verso {
+padding-left: 99px;
+padding-right: 99px;
+}
  body{
+ 	color:#464e54;
  	font-family: 'open sans';
  	background-color: #f4f4f4;
  }
+ strong, b {
+ 	font-family: 'open sans'!important;
+ 	font-weight: 600;
+ }
  p, ul, ol {
- 	margin-top:1.5em;
- 	margin-bottom:1em;
- 	font-size:1.6em;
+ 	padding-top:1.5em;
+ 	padding-bottom:1em;
+ 	font-size:1.2em;
 	line-height: 1.5em;
 	text-align: left;
 	font-weight:400;
  }
+ ul {
+ 	margin-bottom:1em;
+ }
+ article p:last-child {
+ 	margin-bottom:4em;
+ }
  ul, ol {
  	font-size:1.2em;
+ 	margin-bottom:0;
+ 	padding-bottom:2em;
  }
  h1 {
  	font-size: 2.6em;
-	margin-top:5em;
-	margin-bottom:1em;
-	padding-bottom:0;
+	padding-top:5em;
+	padding-bottom:1em;
 	text-align: center;
  }
  h2 {
- 	font-size:1.6em;
- 	line-height:1.8em;
-	padding-top:1em;
-	padding-bottom:1em;
-	border-top: dashed 1px black;
-	border-bottom: dashed 1px black;
-	text-align: center;
+ 	font-size:1.8em;
+ 	line-height:1.5em;
+ 	padding-top:2em;
  }
  h3 {
+ 	text-align: center;
  	font-size:1.2em;
 	text-transform: uppercase;
  }
  h4 {
  	font-size:1em;
 	text-transform: uppercase;
+ }
+ article a {
+ 	background-color:#edf3f4;
+ 	color:#4f868e;
+ }
+ article a:hover {
+ 	background-color:#aec7cb;
+ 	color:#4f868e;
  }
 .spine-bookmark {
 	display:none;
@@ -88,23 +109,19 @@ Target sectional elements
 	font-size:1.8em;
 }
 .stardust h1 {
-	margin-top:1em;
+	padding-top:1em;
 	}
 .stardust h2 {
-	border-top: dashed 1px white;
-	border-bottom: dashed 1px white;
-	}
-.stardust h3 {
+	margin-top:0;
+	padding-top:1em;
+	padding-bottom:1em;
 	text-align: center;
-}
-.stardust-twenty {
-	background-color:#767676;
-	color:white;
-}
-.stardust-twenty h2 {
 	border-top: dashed 1px white;
 	border-bottom: dashed 1px white;
 	}
+.stardust-twenty {
+	background-color:white;
+}
 .accessory {
 	margin-top:3em;
 	margin-bottom:3em;
@@ -346,7 +363,10 @@ Description: Graph elements to control the colors, lines, and functions
   padding: 0;
   width:70%;
   height:200px;
-  overflow: hidden;
+}
+.mospace {
+	padding-top:1em;
+	padding-bottom:1em;
 }
 .pieForAll h3 {
 	padding-bottom:12px;
