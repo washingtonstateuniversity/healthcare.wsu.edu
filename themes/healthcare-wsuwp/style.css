@@ -1,0 +1,12 @@
+/*
+ Theme Name:     WSU Sandbox
+ Theme URI:      http://web.wsu.edu
+ Description:    A child theme for Washington State University's Spine framework for Sandbox use
+ Author:         WSU University Communications
+ Author URI:     http://sandbox.wsu.edu
+ Template:       spine
+ Version:        0.0.1
+*/
+
+@import url("../spine/style.css");
+@import url("assets/css/sand.css");
