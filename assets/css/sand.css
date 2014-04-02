@@ -184,7 +184,6 @@ Description: Graph elements to control the colors, lines, and functions
 #svg-wa-map {
 	position:relative;
 	width:100%;
-	height:auto;
 	margin-top:1em;
 	margin-bottom:3em;
 }
@@ -503,8 +502,7 @@ svg {
   user-select: none;
   /* Trying to get SVG to act like a greedy block in all browsers */
   display: block;
-  width:100%;
-  height:100%;
+
 }
 svg text {
   font: normal 10px #5E6A71;
