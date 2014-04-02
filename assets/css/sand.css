@@ -60,7 +60,7 @@ Title: Page elements
 Description: Elements to create a unified page with a single presentation of content
 */
 .headbg {
-	background-image: url('/wp-content/themes/wsu-healthcare/assets/images/elements/counties.png');
+	background-image: url('../images/elements/counties.png');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 170% auto;
@@ -137,19 +137,19 @@ Target sectional elements
 	height:15em;
 }
 .pic1 {
-	background-image: url('/wp-content/themes/wsu-healthcare/assets/images/elements/spokaneCampus.jpg');
+	background-image: url('../images/elements/spokaneCampus.jpg');
 	background-size:100% auto;
 	background-position: 0 0;
 	background-repeat: no-repeat;
 }
 .pic2 {
-	background-image: url('/wp-content/themes/wsu-healthcare/assets/images/elements/nursingStevens.jpg');
+	background-image: url('../images/elements/nursingStevens.jpg');
 	background-size:100% auto;
 	background-position: 0 0;
 	background-repeat: no-repeat;
 }
 .pic3 {
-	background-image: url('/wp-content/themes/wsu-healthcare/assets/images/elements/farmerSon.jpg');
+	background-image: url('../images/elements/farmerSon.jpg');
 	background-size:100% auto;
 	background-position: 0 0;
 	background-repeat: no-repeat;
