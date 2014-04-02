@@ -113,6 +113,10 @@ Target sectional elements
 	border-top: dashed 1px white;
 	border-bottom: dashed 1px white;
 	}
+.stardust h3 {
+	padding-bottom:0;
+	padding-top:2em;
+}
 .stardust-twenty {
 	background-color:white;
 }
@@ -181,15 +185,12 @@ Description: Graph elements to control the colors, lines, and functions
 	position:relative;
 	width:100%;
 	height:auto;
-	margin-top:3em;
+	margin-top:1em;
 	margin-bottom:3em;
 }
 #svg-wa-map svg {
 	overflow: hidden;
 	display:block;
-}
-.counties h3 {
-	background-color: rgba(247,247,247,0.75);
 }
 .counties {
 	fill:#F26D4E;
@@ -306,6 +307,7 @@ Description: Graph elements to control the colors, lines, and functions
 .tooltip h3 {
   background-color: rgba(247,247,247,0.75);
   font-size:1.2em;
+  padding-bottom:12px;
 }
 .tooltip h4 {
 	font-size:1.1em;
@@ -351,8 +353,7 @@ Description: Graph elements to control the colors, lines, and functions
 #medschoolgrads {
   margin: 0;
   padding: 0;
-  width:70%;
-  height:200px;
+  text-align: center;
 }
 
 #lmtAccess {
@@ -432,7 +433,7 @@ Description: Graph elements to control the colors, lines, and functions
 
 .nvtooltip h3 {
   margin: 0;
-  padding: 4px 14px;
+  padding: 4px 12px;
   line-height: 18px;
   font-weight: normal;
   background-color: rgba(247,247,247,0.75);

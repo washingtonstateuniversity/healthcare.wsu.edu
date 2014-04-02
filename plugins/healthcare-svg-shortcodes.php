@@ -92,7 +92,7 @@ class WSU_Healthcare_Shortcodes {
 
 
 		<div id="svg-wa-map">
-		<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 670 405" preserveAspectRatio="xMinYMin meet">
+		<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="670" height="405" viewBox="0 0 670 405" preserveAspectRatio="xMinYMin meet">
 		<g id="waWrap">
 		<g id="yakima" class="counties">
 			<path d="M381.223,329.229l0.154-46.008c-0.536-0.117-0.9-0.212-0.9-0.212
@@ -1243,7 +1243,7 @@ class WSU_Healthcare_Shortcodes {
 		ob_start();
 		?>
 		<div id="medschoolgrads" class='with-3d-shadow with-transitions'>
-			<svg width="720" height="466"></svg>
+			<svg width="720" height="200" viewBox ="0 0 720 200"></svg>
 		</div>
 		<script>
 
