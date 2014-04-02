@@ -55,6 +55,53 @@ Description: Styling to handle the framework
 .spine-bookmark {
 	display:none;
 }
+.tooltip {
+	display:none;
+	text-align: center;
+	color: #242424;
+	max-width: 200px;
+	min-height: 30px;
+	position: absolute;
+	top:-999em;
+	left:-99em;
+	background: #ffffff;
+	border: 1px solid #6d6d6d;
+	margin: 4px 4px 12px 4px;
+	padding: 5px;
+	border-radius: 5px;
+	z-index:99199;
+}
+.tooltip:after, .tooltip:before {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+.tooltip:after {
+	border-top-color: #ffffff;
+	border-width: 8px;
+	margin-left: -8px;
+}
+.tooltip:before {
+	border-top-color: #6d6d6d;
+	border-width: 9px;
+	margin-left: -9px;
+}
+.tooltip h3, .tooltip h4 {
+	color:#5e6a71;
+}
+.tooltip h3 {
+  background-color: rgba(247,247,247,0.75);
+}
+.tooltip h4 {
+	font-size:1.1em;
+	text-transform: capitalize;
+	font-weight: normal;
+}
 /*
 Title: WA SVG MAP
 Description: SVG map of WA elements seperate counties for easy individual targeting
@@ -142,27 +189,6 @@ Description: Elements to create a unified page with a single presentation of con
 	background-size: 170% auto;
 	border-bottom:solid 16px #981e32;
 }
-/*******************
-Temporary dimensions until the rebound is fixed
-*******************/
-.rebound {
-	position: relative;
-	padding-top:3em;
-	padding-bottom:3em;
-/*	margin-left:auto;
-	margin-right:auto;
-*/}
-/*#knight {
-	width:52em;
-	display: block;
-	float:right;
-	}
-*/
-.size-lt-medium #knight {
-	width:100%;
-	display: block;
-	float:left;
-	}
 .size-lt-medium .stardust p {
 	margin-left:16px;
 	margin-right:16px;
@@ -189,10 +215,6 @@ margin-right:16px;
 	}
 .stardust h3 {
 	text-align: center;
-}
-.stardust p {
-	clear: both;
-	padding-top:2em;
 }
 .stardust-twenty {
 	background-color:#767676;
@@ -263,12 +285,14 @@ Description: Graph elements to control the colors, lines, and functions
 #svg-wa-map {
 	position:relative;
 	width:100%;
+	height:auto;
 	display:block;
-	margin-top:4em;
-	margin-bottom:6em;
 }
 #svg-wa-map svg {
 	overflow: hidden;
+}
+.counties h3 {
+	background-color: rgba(247,247,247,0.75);
 }
 #rdRatio {
 	margin-top:5%;

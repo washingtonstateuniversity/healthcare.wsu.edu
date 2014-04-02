@@ -1,4 +1,8 @@
 <?php
+
+// Load healthcare shortcode plugin
+include __DIR__ . '/plugins/healthcare-svg-shortcodes.php';
+
 function my_mce_buttons_2($buttons) {	
 	/**
 	 * Add in a core button that's disabled by default

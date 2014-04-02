@@ -1,147 +1,100 @@
 <?php
-/*
-Plugin Name: WSU SVG WA Map
-Plugin URI: http://sandbox.wsu.edu/assets/
-Description: Allows users to register for assets.
-Author: washingtonstateuniversity, jeremyfelt
-Author URI: http://web.wsu.edu/
-Version: 0.1.3
-License: GPL version 2 or later - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
-*/
-class WSU_sandbox_svg_wa_map {
+
+class WSU_Healthcare_Shortcodes {
 	/**
-	* Setup the hooks.
-	*/
+	 * Setup the hooks.
+	 */
 	public function __construct() {
-		add_shortcode('svg_wa_map', array(
-			$this,
-			'svg_wa_map_display'
-		));
+		add_shortcode('svg_wa_map', array( $this, 'svg_wa_map_display' ) );
+		add_shortcode( 'svg_wa_uspie',    array( $this, 'svg_wa_uspie_display' ) );
+		add_shortcode( 'svg_wa_medschoolgrads',    array( $this, 'svg_wa_medschoolgrads_display' ) );
+		add_shortcode( 'svg_wa_drRatio',    array( $this, 'svg_wa_drRatio_display' ) );
 	}
+
 	/**
-	* Handle the display of the svg_wa_map shortcode.
-	*
-	* @return string HTML output
-	*/
+	 * Handle the display of the svg_ shortcode.
+	 *
+	 * @return string HTML output
+	 */
 	public function svg_wa_map_display() {
 		// Build the output to return for use by the shortcode.
 		ob_start();
-?>
-<style>
-.tooltip {
-	display:none;
-	text-align: center;
-	color: #242424;
-	max-width: 200px;
-	min-height: 30px;
-	position: absolute;
-	top:-999em;
-	left:-99em;
-	background: #ffffff;
-	border: 1px solid #6d6d6d;
-	margin: 4px 4px 12px 4px;
-	padding: 5px;
-	border-radius: 5px;
-	z-index:99199;
-}
-.tooltip:after, .tooltip:before {
-	top: 100%;
-	left: 50%;
-	border: solid transparent;
-	content: " ";
-	height: 0;
-	width: 0;
-	position: absolute;
-	pointer-events: none;
-}
-.tooltip:after {
-	border-top-color: #ffffff;
-	border-width: 8px;
-	margin-left: -8px;
-}
-.tooltip:before {
-	border-top-color: #6d6d6d;
-	border-width: 9px;
-	margin-left: -9px;
-}
-
-/* CSS by GenerateCSS.com */
-</style>
-<script>
-	var json = {
-		"counties":
-			{
-				"yakima":"Population - 246,000 Pysicians - 209",
-				"whitman":"Population - 45,950 Pysicians - 25",
-				"whatcom":"Population - 203,505 Pysicians - 118",
-				"wallaWalla":"Population - 59,100 Pysicians - 57",
-				"wahkiakum":"Population - 4,025 Pysicians - N/A",
-				"thurston":"Population - 256,800 Pysicians - 205",
-				"stevens":"Population - 43,700 Pysicians - 26",
-				"spokane":"Population - 475,600 Pysicians - 412",
-				"snohomish":"Population - 722,900 Pysicians - 382",
-				"skamania":"Population - 11,275 Pysicians - N/A",
-				"skagit":"Population - 117,950 Pysicians - 145",
-				"sanJuan":"Population - 15,925 Pysicians - 10",
-				"pendOreille":"Population - 13,100 Pysicians - 6",
-				"okanogan":"Population - 41,425 Pysicians - 29",
-				"kittitas":"Population - 20,600 Pysicians - 27",
-				"lincoln":"Population - 10,675 Pysicians - 6",
-				"franklin":"Population - 82,500 Pysicians - 35",
-				"ferry":"Population - 7,650 Pysicians - 3",
-				"pierce":"Population - 808,200 Pysicians - 413",
-				"pacific":"Population - 20,970 Pysicians - 8",
-				"mason":"Population - 61,450 Pysicians - N/A",
-				"lewis":"Population - 76,300 Pysicians - 51",
-				"klickitat":"Population - 20,600 Pysicians - 11",
-				"kitsap":"Population - 254,500 Pysicians - 91",
-				"king":"Population - 1,957,000 Pysicians - N/A",
-				"jefferson":"Population - 30,175 Pysicians - 21",
-				"island":"Population - 79,350 Pysicians - 26",
-				"graysHarbor":"Population - 73,150 Pysicians - 43",
-				"grant":"Population - 91,000 Pysicians - 49",
-				"garfield":"Population - 2,250 Pysicians - 1",
-				"douglas":"Population - 38,900 Pysicians - 13",
-				"cowlitz":"Population - 103,050 Pysicians - 79",
-				"columbia":"Population - 4,100 Pysicians - 4",
-				"clark":"Population - 431,250 Pysicians - 259",
-				"clallam":"Population - 72,000 Pysicians - 52",
-				"chelan":"Population - 73,200 Pysicians - 63",
-				"benton":"Population - 180,000 Pysicians - 63",
-				"asotin":"Population - 21,700 Pysicians - 9",
-				"adams":"Population - 19,015 Pysicians - 15",
-			}
-	};
-	$(function() {
-		var data = json;
-		$.each($("svg").find(".counties"),function(){
-			var tar = $(this);
-			var county = tar.attr('id');
-			var title = data.counties[county]; //tar.find('title').data('title'); I couldn't cancel the default tooltip with out lot of code
-			if(title!=""){
-				tar.hover(function(){
-					$('<div class="tooltip">TEXT HERE</div>')
-					.html(title)
-					.appendTo('body')
-					.fadeIn('slow');
-				}, function() {
-					$('.tooltip').remove();
-				}).mousemove(function(e) {
-					var vCenter = $('.tooltip').outerWidth();
-					var mousex = e.pageX - ( vCenter / 2 ); //Get X coordinates
-					var mousey = e.pageY - $('.tooltip').outerHeight() - 20; //Get Y coordinates
-					$('.tooltip').css({ top: mousey, left: mousex });
+		?>
+		<script>
+			var json = {
+				"counties":
+				{
+					"yakima":"<h3>Yakima</h3><h4>Population - 246,000</h4> <h4>Physicians - 209</h4>",
+					"whitman":"<h3>Whitman</h3><h4>Population - 45,950</h4> <h4>Physicians - 25</h4>",
+					"whatcom":"<h3>Whatcom</h3><h4>Population - 203,505</h4> <h4>Physicians - 118</h4>",
+					"wallaWalla":"<h3>Walla Walla</h3><h4>Population - 59,100</h4> <h4>Physicians - 57</h4>",
+					"wahkiakum":"<h3>Wahkiakum</h3><h4>Population - 4,025</h4> <h4>Physicians - N/A</h4>",
+					"thurston":"<h3>Thurston</h3><h4>Population - 256,800</h4> <h4>Physicians - 205</h4>",
+					"stevens":"<h3>Stevens</h3><h4>Population - 43,700</h4> <h4>Physicians - 26</h4>",
+					"spokane":"<h3>Spokane</h3><h4>Population - 475,600</h4> <h4>Physicians - 412</h4>",
+					"snohomish":"<h3>Snohomish</h3><h4>Population - 722,900</h4> <h4>Physicians - 382</h4>",
+					"skamania":"<h3>Skamania</h3><h4>Population - 11,275</h4> <h4>Physicians - N/A</h4>",
+					"skagit":"<h3>Skagit</h3><h4>Population - 117,950</h4> <h4>Physicians - 145</h4>",
+					"sanJuan":"<h3>San Juan</h3><h4>Population - 15,925</h4> <h4>Physicians - 10</h4>",
+					"pendOreille":"<h3>Pend O'Reille</h3><h4>Population - 13,100</h4> <h4>Physicians - 6</h4>",
+					"okanogan":"<h3>Okanogan</h3><h4>Population - 41,425</h4> <h4>Physicians - 29</h4>",
+					"kittitas":"<h3>Kittitas</h3><h4>Population - 20,600</h4> <h4>Physicians - 27</h4>",
+					"lincoln":"<h3>Lincoln</h3><h4>Population - 10,675</h4> <h4>Physicians - 6</h4>",
+					"franklin":"<h3>Franklin</h3><h4>Population - 82,500</h4> <h4>Physicians - 35</h4>",
+					"ferry":"<h3>Ferry</h3><h4>Population - 7,650</h4> <h4>Physicians - 3</h4>",
+					"pierce":"<h3>Pierce</h3><h4>Population - 808,200</h4> Physicians - 413",
+					"pacific":"<h3>Pacific</h3><h4>Population - 20,970</h4> <h4>Physicians - 8</h4>",
+					"mason":"<h3>Mason</h3><h4>Population - 61,450</h4> <h4>Physicians - N/A</h4>",
+					"lewis":"<h3>Lewis</h3><h4>Population - 76,300</h4> <h4>Physicians - 51</h4>",
+					"klickitat":"<h3>Klickitat</h3><h4>Population - 20,600</h4> <h4>Physicians - 11</h4>",
+					"kitsap":"<h3>Kitsap</h3><h4>Population - 254,500</h4> <h4>Physicians - 91</h4>",
+					"king":"<h3>King</h3><h4>Population - 1,957,000</h4> <h4>Physicians - N/A</h4>",
+					"jefferson":"<h3>Jefferson</h3><h4>Population - 30,175</h4> <h4>Physicians - 21</h4>",
+					"island":"<h3>Island</h3><h4>Population - 79,350</h4> <h4>Physicians - 26</h4>",
+					"graysHarbor":"<h3>Grays Harbor</h3><h4>Population - 73,150</h4> <h4>Physicians - 43</h4>",
+					"grant":"<h3>Grant</h3><h4>Population - 91,000</h4> <h4>Physicians - 49</h4>",
+					"garfield":"<h3>Garfield</h3><h4>Population - 2,250</h4> <h4>Physicians - 1</h4>",
+					"douglas":"<h3>Douglas</h3><h4>Population - 38,900</h4> <h4>Physicians - 13</h4>",
+					"cowlitz":"<h3>Cowlitz</h3><h4>Population - 103,050</h4> <h4>Physicians - 79</h4>",
+					"columbia":"<h3>Columbia</h3><h4>Population - 4,100</h4> <h4>Physicians - 4</h4>",
+					"clark":"<h3>Clark</h3><h4>Population - 431,250</h4> <h4>Physicians - 259</h4>",
+					"clallam":"<h3>Clallam</h3><h4>Population - 72,000</h4> <h4>Physicians - 52</h4>",
+					"chelan":"<h3>Chelan</h3><h4>Population - 73,200</h4> <h4>Physicians - 63</h4>",
+					"benton":"<h3>Benton</h3><h4>Population - 180,000</h4> <h4>Physicians - 63</h4>",
+					"asotin":"<h3>Asotin</h3><h4>Population - 21,700</h4> <h4>Physicians - 9</h4>",
+					"adams":"<h3>Adams</h3><h4>Population - 19,015</h4> <h4>Physicians - 15</h4>",
+				}
+			};
+			$(function() {
+				var data = json;
+				$.each($("svg").find(".counties"),function(){
+					var tar = $(this);
+					var county = tar.attr('id');
+					var title = data.counties[county]; //tar.find('title').data('title'); I couldn't cancel the default tooltip with out lot of code
+					if(title!=""){
+						tar.hover(function(){
+							$('<div class="tooltip">TEXT HERE</div>')
+								.html(title)
+								.appendTo('body')
+								.fadeIn('slow');
+						}, function() {
+							$('.tooltip').remove();
+						}).mousemove(function(e) {
+							var vCenter = $('.tooltip').outerWidth();
+							var mousex = e.pageX - ( vCenter / 2 ); //Get X coordinates
+							var mousey = e.pageY - $('.tooltip').outerHeight() - 20; //Get Y coordinates
+							$('.tooltip').css({ top: mousey, left: mousex });
+						});
+					}
 				});
-			}
-		});
-	});
-	</script>
+			});
+		</script>
 
 
-<div id="svg-wa-map">
-	<h3>Health Care Professional Shortages in the State of Washington<sup><a href="#">1</a></sup></h3>
-	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 670 405" preserveAspectRatio="xMinYMin meet">
-	<g id="waWrap">
+		<div id="svg-wa-map">
+		<h3>Health Care Professional Shortages in the State of Washington<sup><a href="#">1</a></sup></h3>
+		<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 670 405" preserveAspectRatio="xMinYMin meet">
+		<g id="waWrap">
 		<g id="yakima" class="counties">
 			<path d="M381.223,329.229l0.154-46.008c-0.536-0.117-0.9-0.212-0.9-0.212
 						s-1.4-0.446-1.684-1.849c-0.284-1.399-0.479-0.922-1.94-2.376c-1.461-1.456-0.872-1.427-0.652-2.495
@@ -1156,29 +1109,257 @@ class WSU_sandbox_svg_wa_map {
 	l-29.827-0.381l-0.255,19.623l86.218,0.179c0,0,1.064-0.508,1.878-0.82C509.541,270.757,510.156,269.465,510.94,269.744z"/>
 			</path>
 		</g>
-	</g>
-	</svg>
-	<div id="mapKey">
-		<div class="justice">
-			<div class="mapLabel labelLow"></div>
-			<div class="equals">No health Professional Shortage</div>
+		</g>
+		</svg>
+		<div id="mapKey">
+			<div class="justice">
+				<div class="mapLabel labelLow"></div>
+				<div class="equals">No health Professional Shortage</div>
+			</div>
+			<div class="justice">
+				<div class="mapLabel labelMid"></div>
+				<div class="equals">1%-50% Health Professional Shortage</div>
+			</div>
+			<div class="justice">
+				<div class="mapLabel labelHigh"></div>
+				<div class="equals">50%-100% Health Professional Shortage</div>
+			</div>
 		</div>
-		<div class="justice">
-			<div class="mapLabel labelMid"></div>
-			<div class="equals">1%-50% Health Professional Shortage</div>
 		</div>
-		<div class="justice">
-			<div class="mapLabel labelHigh"></div>
-			<div class="equals">50%-100% Health Professional Shortage</div>
-		</div>
-	</div>
-</div>
-<?php
+		<?php
 		$content = ob_get_contents();
 		ob_end_clean();
 		return $content;
 	}
+
+	/**
+	 * Handle the display of the svg_ shortcode.
+	 *
+	 * @return string HTML output
+	 */
+	public function svg_wa_uspie_display() {
+		// Build the output to return for use by the shortcode.
+		ob_start();
+		?>
+		<div class="row halves pieForAll">
+			<div class="column one">
+				<h3>2013 applicants</h3>
+				<svg id="lmtAccess"></svg>
+			</div>
+			<div class="column two">
+				<h3>2013 State of Washington applicants</h3>
+				<svg id="lmtAccessTwo"></svg>
+			</div>
+		</div>
+		<script>
+
+			var usdata = [
+				{
+					key: "Total Applicants",
+					y: 6015
+				},
+				{
+					key: "Admitted",
+					y: 235
+				},
+			];
+
+
+			nv.addGraph(function() {
+				var width = 300,
+					height = 300;
+
+				var chart = nv.models.pieChart()
+					.x(function(d) { return d.key })
+					.y(function(d) { return d.y })
+					.color(d3.scale.category10().range())
+					.width(width)
+					.height(height)
+					.color(['#F2EDDB', '#F26D4E', '#EEEF8D']);
+
+				d3.select("#lmtAccess")
+					.datum(usdata)
+					.transition().duration(1200)
+					.attr('width', width)
+					.attr('height', height)
+					.call(chart);
+
+				chart.dispatch.on('stateChange', function(e) { nv.log('New State:', JSON.stringify(e)); });
+
+				return chart;
+			});
+			var wadata = [
+				{
+					key: "Total Applicants",
+					y: 800
+				},
+				{
+					key: "Admitted",
+					y: 120
+				},
+			];
+
+
+			nv.addGraph(function() {
+				var width = 300,
+					height = 300;
+
+				var chart = nv.models.pieChart()
+					.x(function(d) { return d.key })
+					.y(function(d) { return d.y })
+					.color(d3.scale.category10().range())
+					.width(width)
+					.height(height)
+					.color(['#F2EDDB', '#F26D4E', '#EEEF8D']);
+
+				d3.select("#lmtAccessTwo")
+					.datum(wadata)
+					.transition().duration(1200)
+					.attr('width', width)
+					.attr('height', height)
+					.call(chart);
+
+				chart.dispatch.on('stateChange', function(e) { nv.log('New State:', JSON.stringify(e)); });
+
+				return chart;
+			});
+
+		</script>
+
+
+		<?php
+		$content = ob_get_contents();
+		ob_end_clean();
+
+		return $content;
+	}
+
+	/**
+	 * Handle the display of the svg_wa_map shortcode.
+	 *
+	 * @return string HTML output
+	 */
+	public function svg_wa_medschoolgrads_display() {
+		// Build the output to return for use by the shortcode.
+		ob_start();
+		?>
+		<div id="medschoolgrads" class='with-3d-shadow with-transitions'>
+			<svg width="720" height="466"></svg>
+		</div>
+		<script>
+
+			long_short_data = [
+				{
+					key: 'Medical School graduates per 100,000 residents',
+					color: '#F26D4E',
+					values: [
+						{
+							"label" : "Washington" ,
+							"value" : 3
+						} ,
+						{
+							"label" : "Missouri" ,
+							"value" : 15.2
+						} ,
+
+					]
+				},
+
+			];
+
+
+
+
+			var chart;
+			nv.addGraph(function() {
+				chart = nv.models.multiBarHorizontalChart()
+					.x(function(d) { return d.label })
+					.y(function(d) { return d.value })
+					.margin({top: 30, right: 20, bottom: 50, left: 175})
+					//.showValues(true)
+					//.tooltips(false)
+					.barColor(d3.scale.category20().range())
+					.transitionDuration(250)
+					.stacked(false)
+					.showControls(false);
+
+				chart.yAxis
+					.tickFormat(d3.format(',.2f'));
+
+				d3.select('#medschoolgrads svg')
+					.datum(long_short_data)
+					.call(chart);
+
+				nv.utils.windowResize(chart.update);
+
+				chart.dispatch.on('stateChange', function(e) { nv.log('New State:', JSON.stringify(e)); });
+
+				return chart;
+			});
+
+
+
+		</script>
+
+		<?php
+		$content = ob_get_contents();
+		ob_end_clean();
+
+		return $content;
+	}
+
+	/**
+	 * Handle the display of the svg_ shortcode.
+	 *
+	 * @return string HTML output
+	 */
+	public function svg_wa_drRatio_display() {
+		// Build the output to return for use by the shortcode.
+		ob_start();
+		?>
+		<div id="rdRatio"><header>
+				<h3>Rural Washington's acute shortage of primary care physicians</h3>
+			</header><header>
+				<h4>No. of residents in the U.S. to physician ratio</h4>
+			</header>
+			<div class="justice">
+				<div class="resident"></div>
+				<div class="resident"></div>
+				<div class="resident"></div>
+				<div class="resident"></div>
+				<div class="resident"></div>
+				<div class="resident"></div>
+				<div class="resident"></div>
+				<div class="resident"></div>
+				<div class="resident"></div>
+				<div class="equals">:</div>
+				<div class="dr"></div>
+				<div class="dr"></div>
+			</div>
+			<header>
+				<h4>Eastern WA resident to physician ratio</h4>
+			</header>
+			<div class="justice">
+				<div class="resident"></div>
+				<div class="resident"></div>
+				<div class="resident"></div>
+				<div class="resident"></div>
+				<div class="resident"></div>
+				<div class="resident"></div>
+				<div class="resident"></div>
+				<div class="resident"></div>
+				<div class="resident"></div>
+				<div class="equals">:</div>
+				<div class="dr"></div>
+			</div>
+		</div>
+		<?php
+		$content = ob_get_contents();
+		ob_end_clean();
+
+		return $content;
+	}
 }
-new WSU_sandbox_svg_wa_map();
+new WSU_Healthcare_Shortcodes();
 
 
