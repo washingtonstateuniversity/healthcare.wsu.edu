@@ -193,6 +193,12 @@ Description: Graph elements to control the colors, lines, and functions
 	display:block;
 	width:100%;
 }
+.size-lt-large #svg-wa-map svg {
+	height:300px;
+}
+.size-lt-medium #svg-wa-map svg {
+	height:250px;
+}
 .counties {
 	fill:#F26D4E;
 	stroke:#5E6A71;
@@ -236,7 +242,7 @@ Description: Graph elements to control the colors, lines, and functions
 }
 #graysHarbor, #grant, #yakima, #whatcom, #wallaWalla, #wahkiakum, #skamania, #pendOreille, #okanogan, #kittitas, #lincoln, #franklin, #ferry, ,#pacific, #mason, #lewis, #klickitat, #kitsap, #jefferson, #island, #garfield, #cowlitz, #columbia, #clallam, #chelan, #benton, #asotin, #adams, #thurston, #stevens, #spokane, #skamania, #sanJuan, {}
 #mapKey {
-	margin-bottom:20px;
+	margin-bottom:30px;
 	text-align: center;
 	font-size:90%;
 }
