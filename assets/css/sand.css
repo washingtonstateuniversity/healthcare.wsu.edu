@@ -60,18 +60,12 @@ padding-right: 99px;
  	text-align: center;
  	font-size:1.2em;
 	text-transform: uppercase;
+	padding-bottom:1em;
+	padding-top:1em;
  }
  h4 {
  	font-size:1em;
-	text-transform: uppercase;
- }
- article a {
- 	background-color:#edf3f4;
- 	color:#4f868e;
- }
- article a:hover {
- 	background-color:#aec7cb;
- 	color:#4f868e;
+ 	padding-bottom:.875em;
  }
 .spine-bookmark {
 	display:none;
@@ -241,11 +235,10 @@ Description: Graph elements to control the colors, lines, and functions
 #graysHarbor, #grant, #yakima, #whatcom, #wallaWalla, #wahkiakum, #skamania, #pendOreille, #okanogan, #kittitas, #lincoln, #franklin, #ferry, ,#pacific, #mason, #lewis, #klickitat, #kitsap, #jefferson, #island, #garfield, #cowlitz, #columbia, #clallam, #chelan, #benton, #asotin, #adams, #thurston, #stevens, #spokane, #skamania, #sanJuan, {}
 #mapKey {
 	margin-top:20px;
-	margin-bottom:;
+	margin-bottom:20px;
 }
 .justice {
 	display:inline-block;
-	margin-left:1em;
 }
 .mapLabel {
 	display:inline-block;
@@ -319,12 +312,7 @@ Description: Graph elements to control the colors, lines, and functions
 	display:block;
 }
 #rdRatio {
-	margin-top:5%;
 	text-align: center;
-}
-#rdRatio h3 {
-	padding-bottom:12px;
-	margin-bottom:12px;
 }
 .resident {
 	display:inline-block;
@@ -364,14 +352,7 @@ Description: Graph elements to control the colors, lines, and functions
   width:70%;
   height:200px;
 }
-.mospace {
-	padding-top:1em;
-	padding-bottom:1em;
-}
-.pieForAll h3 {
-	padding-bottom:12px;
-	margin-bottom:12px;
-}
+
 #lmtAccess {
 	width:100%;
 	height:300px;

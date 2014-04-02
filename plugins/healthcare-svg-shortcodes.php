@@ -92,7 +92,6 @@ class WSU_Healthcare_Shortcodes {
 
 
 		<div id="svg-wa-map">
-		<h3>Health Care Professional Shortages in the State of Washington<sup><a href="#">1</a></sup></h3>
 		<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 670 405" preserveAspectRatio="xMinYMin meet">
 		<g id="waWrap">
 		<g id="yakima" class="counties">
@@ -1143,11 +1142,11 @@ class WSU_Healthcare_Shortcodes {
 		?>
 		<div class="row halves pieForAll">
 			<div class="column one">
-				<h3>2013 applicants</h3>
+				<h4>2013 applicants</h4>
 				<svg id="lmtAccess"></svg>
 			</div>
 			<div class="column two">
-				<h3>2013 State of Washington applicants</h3>
+				<h4>2013 State of Washington applicants</h4>
 				<svg id="lmtAccessTwo"></svg>
 			</div>
 		</div>
@@ -1318,8 +1317,6 @@ class WSU_Healthcare_Shortcodes {
 		ob_start();
 		?>
 		<div id="rdRatio"><header>
-				<h3>Rural Washington's acute shortage of primary care physicians</h3>
-			</header><header>
 				<h4>No. of residents in the U.S. to physician ratio</h4>
 			</header>
 			<div class="justice">
