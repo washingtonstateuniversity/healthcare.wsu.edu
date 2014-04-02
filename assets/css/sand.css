@@ -125,7 +125,8 @@ Target sectional elements
 	margin-bottom:3em;
 }
 .accessory ul {
-	margin-top:6px;
+	margin-top:0;
+	padding-top:0;
 }
 .accessory ul li {
 	padding-bottom:0;
@@ -190,6 +191,7 @@ Description: Graph elements to control the colors, lines, and functions
 #svg-wa-map svg {
 	overflow: hidden;
 	display:block;
+	width:100%;
 }
 .counties {
 	fill:#F26D4E;
@@ -234,7 +236,6 @@ Description: Graph elements to control the colors, lines, and functions
 }
 #graysHarbor, #grant, #yakima, #whatcom, #wallaWalla, #wahkiakum, #skamania, #pendOreille, #okanogan, #kittitas, #lincoln, #franklin, #ferry, ,#pacific, #mason, #lewis, #klickitat, #kitsap, #jefferson, #island, #garfield, #cowlitz, #columbia, #clallam, #chelan, #benton, #asotin, #adams, #thurston, #stevens, #spokane, #skamania, #sanJuan, {}
 #mapKey {
-	margin-top:20px;
 	margin-bottom:20px;
 	text-align: center;
 	font-size:90%;
@@ -352,6 +353,8 @@ Description: Graph elements to control the colors, lines, and functions
 #medschoolgrads {
   margin: 0;
   padding: 0;
+
+text-align: left;
  width:90%;
 }
 
