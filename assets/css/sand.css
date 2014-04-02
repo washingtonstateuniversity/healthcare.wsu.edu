@@ -236,6 +236,8 @@ Description: Graph elements to control the colors, lines, and functions
 #mapKey {
 	margin-top:20px;
 	margin-bottom:20px;
+	text-align: center;
+	font-size:90%;
 }
 .justice {
 	display:inline-block;
