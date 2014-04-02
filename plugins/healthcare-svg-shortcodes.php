@@ -8,6 +8,7 @@ class WSU_Healthcare_Shortcodes {
 		add_shortcode('svg_wa_map', array( $this, 'svg_wa_map_display' ) );
 		add_shortcode( 'svg_wa_uspie',    array( $this, 'svg_wa_uspie_display' ) );
 		add_shortcode( 'svg_wa_medschoolgrads',    array( $this, 'svg_wa_medschoolgrads_display' ) );
+		add_shortcode( 'svg_wa_drRatio',    array( $this, 'svg_wa_drRatio_display' ) );
 	}
 
 	/**
@@ -1300,6 +1301,58 @@ class WSU_Healthcare_Shortcodes {
 
 		</script>
 
+		<?php
+		$content = ob_get_contents();
+		ob_end_clean();
+
+		return $content;
+	}
+
+	/**
+	 * Handle the display of the svg_ shortcode.
+	 *
+	 * @return string HTML output
+	 */
+	public function svg_wa_drRatio_display() {
+		// Build the output to return for use by the shortcode.
+		ob_start();
+		?>
+		<div id="rdRatio"><header>
+				<h3>Rural Washington's acute shortage of primary care physicians</h3>
+			</header><header>
+				<h4>No. of residents in the U.S. to physician ratio</h4>
+			</header>
+			<div class="justice">
+				<div class="resident"></div>
+				<div class="resident"></div>
+				<div class="resident"></div>
+				<div class="resident"></div>
+				<div class="resident"></div>
+				<div class="resident"></div>
+				<div class="resident"></div>
+				<div class="resident"></div>
+				<div class="resident"></div>
+				<div class="equals">:</div>
+				<div class="dr"></div>
+				<div class="dr"></div>
+			</div>
+			<header>
+				<h4>Eastern WA resident to physician ratio</h4>
+			</header>
+			<div class="justice">
+				<div class="resident"></div>
+				<div class="resident"></div>
+				<div class="resident"></div>
+				<div class="resident"></div>
+				<div class="resident"></div>
+				<div class="resident"></div>
+				<div class="resident"></div>
+				<div class="resident"></div>
+				<div class="resident"></div>
+				<div class="equals">:</div>
+				<div class="dr"></div>
+			</div>
+		</div>
 		<?php
 		$content = ob_get_contents();
 		ob_end_clean();
