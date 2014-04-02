@@ -20,7 +20,7 @@ class svg_wa_uspie {
 	}
 
 	/**
-	 * Handle the display of the svg_wa_map shortcode.
+	 * Handle the display of the svg_ shortcode.
 	 *
 	 * @return string HTML output
 	 */

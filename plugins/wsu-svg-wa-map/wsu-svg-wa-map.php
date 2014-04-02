@@ -19,7 +19,7 @@ class WSU_sandbox_svg_wa_map {
 		));
 	}
 	/**
-	* Handle the display of the svg_wa_map shortcode.
+	* Handle the display of the svg_ shortcode.
 	*
 	* @return string HTML output
 	*/
@@ -27,89 +27,49 @@ class WSU_sandbox_svg_wa_map {
 		// Build the output to return for use by the shortcode.
 		ob_start();
 ?>
-<style>
-.tooltip {
-	display:none;
-	text-align: center;
-	color: #242424;
-	max-width: 200px;
-	min-height: 30px;
-	position: absolute;
-	top:-999em;
-	left:-99em;
-	background: #ffffff;
-	border: 1px solid #6d6d6d;
-	margin: 4px 4px 12px 4px;
-	padding: 5px;
-	border-radius: 5px;
-	z-index:99199;
-}
-.tooltip:after, .tooltip:before {
-	top: 100%;
-	left: 50%;
-	border: solid transparent;
-	content: " ";
-	height: 0;
-	width: 0;
-	position: absolute;
-	pointer-events: none;
-}
-.tooltip:after {
-	border-top-color: #ffffff;
-	border-width: 8px;
-	margin-left: -8px;
-}
-.tooltip:before {
-	border-top-color: #6d6d6d;
-	border-width: 9px;
-	margin-left: -9px;
-}
-
-/* CSS by GenerateCSS.com */
-</style>
 <script>
 	var json = {
 		"counties":
 			{
-				"yakima":"Population - 246,000 Pysicians - 209",
-				"whitman":"Population - 45,950 Pysicians - 25",
-				"whatcom":"Population - 203,505 Pysicians - 118",
-				"wallaWalla":"Population - 59,100 Pysicians - 57",
-				"wahkiakum":"Population - 4,025 Pysicians - N/A",
-				"thurston":"Population - 256,800 Pysicians - 205",
-				"stevens":"Population - 43,700 Pysicians - 26",
-				"spokane":"Population - 475,600 Pysicians - 412",
-				"snohomish":"Population - 722,900 Pysicians - 382",
-				"skamania":"Population - 11,275 Pysicians - N/A",
-				"skagit":"Population - 117,950 Pysicians - 145",
-				"sanJuan":"Population - 15,925 Pysicians - 10",
-				"pendOreille":"Population - 13,100 Pysicians - 6",
-				"okanogan":"Population - 41,425 Pysicians - 29",
-				"kittitas":"Population - 20,600 Pysicians - 27",
-				"lincoln":"Population - 10,675 Pysicians - 6",
-				"franklin":"Population - 82,500 Pysicians - 35",
-				"ferry":"Population - 7,650 Pysicians - 3",
-				"pierce":"Population - 808,200 Pysicians - 413",
-				"pacific":"Population - 20,970 Pysicians - 8",
-				"mason":"Population - 61,450 Pysicians - N/A",
-				"lewis":"Population - 76,300 Pysicians - 51",
-				"klickitat":"Population - 20,600 Pysicians - 11",
-				"kitsap":"Population - 254,500 Pysicians - 91",
-				"king":"Population - 1,957,000 Pysicians - N/A",
-				"jefferson":"Population - 30,175 Pysicians - 21",
-				"island":"Population - 79,350 Pysicians - 26",
-				"graysHarbor":"Population - 73,150 Pysicians - 43",
-				"grant":"Population - 91,000 Pysicians - 49",
-				"garfield":"Population - 2,250 Pysicians - 1",
-				"douglas":"Population - 38,900 Pysicians - 13",
-				"cowlitz":"Population - 103,050 Pysicians - 79",
-				"columbia":"Population - 4,100 Pysicians - 4",
-				"clark":"Population - 431,250 Pysicians - 259",
-				"clallam":"Population - 72,000 Pysicians - 52",
-				"chelan":"Population - 73,200 Pysicians - 63",
-				"benton":"Population - 180,000 Pysicians - 63",
-				"asotin":"Population - 21,700 Pysicians - 9",
-				"adams":"Population - 19,015 Pysicians - 15",
+				"yakima":"<h3>Yakima</h3><h4>Population - 246,000</h4> <h4>Physicians - 209</h4>",
+				"whitman":"<h3>Whitman</h3><h4>Population - 45,950</h4> <h4>Physicians - 25</h4>",
+				"whatcom":"<h3>Whatcom</h3><h4>Population - 203,505</h4> <h4>Physicians - 118</h4>",
+				"wallaWalla":"<h3>Walla Walla</h3><h4>Population - 59,100</h4> <h4>Physicians - 57</h4>",
+				"wahkiakum":"<h3>Wahkiakum</h3><h4>Population - 4,025</h4> <h4>Physicians - N/A</h4>",
+				"thurston":"<h3>Thurston</h3><h4>Population - 256,800</h4> <h4>Physicians - 205</h4>",
+				"stevens":"<h3>Stevens</h3><h4>Population - 43,700</h4> <h4>Physicians - 26</h4>",
+				"spokane":"<h3>Spokane</h3><h4>Population - 475,600</h4> <h4>Physicians - 412</h4>",
+				"snohomish":"<h3>Snohomish</h3><h4>Population - 722,900</h4> <h4>Physicians - 382</h4>",
+				"skamania":"<h3>Skamania</h3><h4>Population - 11,275</h4> <h4>Physicians - N/A</h4>",
+				"skagit":"<h3>Skagit</h3><h4>Population - 117,950</h4> <h4>Physicians - 145</h4>",
+				"sanJuan":"<h3>San Juan</h3><h4>Population - 15,925</h4> <h4>Physicians - 10</h4>",
+				"pendOreille":"<h3>Pend O'Reille</h3><h4>Population - 13,100</h4> <h4>Physicians - 6</h4>",
+				"okanogan":"<h3>Okanogan</h3><h4>Population - 41,425</h4> <h4>Physicians - 29</h4>",
+				"kittitas":"<h3>Kittitas</h3><h4>Population - 20,600</h4> <h4>Physicians - 27</h4>",
+				"lincoln":"<h3>Lincoln</h3><h4>Population - 10,675</h4> <h4>Physicians - 6</h4>",
+				"franklin":"<h3>Franklin</h3><h4>Population - 82,500</h4> <h4>Physicians - 35</h4>",
+				"ferry":"<h3>Ferry</h3><h4>Population - 7,650</h4> <h4>Physicians - 3</h4>",
+				"pierce":"<h3>Pierce</h3><h4>Population - 808,200</h4> Physicians - 413",
+				"pacific":"<h3>Pacific</h3><h4>Population - 20,970</h4> <h4>Physicians - 8</h4>",
+				"mason":"<h3>Mason</h3><h4>Population - 61,450</h4> <h4>Physicians - N/A</h4>",
+				"lewis":"<h3>Lewis</h3><h4>Population - 76,300</h4> <h4>Physicians - 51</h4>",
+				"klickitat":"<h3>Klickitat</h3><h4>Population - 20,600</h4> <h4>Physicians - 11</h4>",
+				"kitsap":"<h3>Kitsap</h3><h4>Population - 254,500</h4> <h4>Physicians - 91</h4>",
+				"king":"<h3>King</h3><h4>Population - 1,957,000</h4> <h4>Physicians - N/A</h4>",
+				"jefferson":"<h3>Jefferson</h3><h4>Population - 30,175</h4> <h4>Physicians - 21</h4>",
+				"island":"<h3>Island</h3><h4>Population - 79,350</h4> <h4>Physicians - 26</h4>",
+				"graysHarbor":"<h3>Grays Harbor</h3><h4>Population - 73,150</h4> <h4>Physicians - 43</h4>",
+				"grant":"<h3>Grant</h3><h4>Population - 91,000</h4> <h4>Physicians - 49</h4>",
+				"garfield":"<h3>Garfield</h3><h4>Population - 2,250</h4> <h4>Physicians - 1</h4>",
+				"douglas":"<h3>Douglas</h3><h4>Population - 38,900</h4> <h4>Physicians - 13</h4>",
+				"cowlitz":"<h3>Cowlitz</h3><h4>Population - 103,050</h4> <h4>Physicians - 79</h4>",
+				"columbia":"<h3>Columbia</h3><h4>Population - 4,100</h4> <h4>Physicians - 4</h4>",
+				"clark":"<h3>Clark</h3><h4>Population - 431,250</h4> <h4>Physicians - 259</h4>",
+				"clallam":"<h3>Clallam</h3><h4>Population - 72,000</h4> <h4>Physicians - 52</h4>",
+				"chelan":"<h3>Chelan</h3><h4>Population - 73,200</h4> <h4>Physicians - 63</h4>",
+				"benton":"<h3>Benton</h3><h4>Population - 180,000</h4> <h4>Physicians - 63</h4>",
+				"asotin":"<h3>Asotin</h3><h4>Population - 21,700</h4> <h4>Physicians - 9</h4>",
+				"adams":"<h3>Adams</h3><h4>Population - 19,015</h4> <h4>Physicians - 15</h4>",
 			}
 	};
 	$(function() {
