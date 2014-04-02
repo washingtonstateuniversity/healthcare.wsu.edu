@@ -7,6 +7,7 @@ class WSU_Healthcare_Shortcodes {
 	public function __construct() {
 		add_shortcode('svg_wa_map', array( $this, 'svg_wa_map_display' ) );
 		add_shortcode( 'svg_wa_uspie',    array( $this, 'svg_wa_uspie_display' ) );
+		add_shortcode( 'svg_wa_medschoolgrads',    array( $this, 'svg_wa_medschoolgrads_display' ) );
 	}
 
 	/**
@@ -1224,6 +1225,80 @@ class WSU_Healthcare_Shortcodes {
 
 		</script>
 
+
+		<?php
+		$content = ob_get_contents();
+		ob_end_clean();
+
+		return $content;
+	}
+
+	/**
+	 * Handle the display of the svg_wa_map shortcode.
+	 *
+	 * @return string HTML output
+	 */
+	public function svg_wa_medschoolgrads_display() {
+		// Build the output to return for use by the shortcode.
+		ob_start();
+		?>
+		<div id="medschoolgrads" class='with-3d-shadow with-transitions'>
+			<svg width="720" height="466"></svg>
+		</div>
+		<script>
+
+			long_short_data = [
+				{
+					key: 'Medical School graduates per 100,000 residents',
+					color: '#F26D4E',
+					values: [
+						{
+							"label" : "Washington" ,
+							"value" : 3
+						} ,
+						{
+							"label" : "Missouri" ,
+							"value" : 15.2
+						} ,
+
+					]
+				},
+
+			];
+
+
+
+
+			var chart;
+			nv.addGraph(function() {
+				chart = nv.models.multiBarHorizontalChart()
+					.x(function(d) { return d.label })
+					.y(function(d) { return d.value })
+					.margin({top: 30, right: 20, bottom: 50, left: 175})
+					//.showValues(true)
+					//.tooltips(false)
+					.barColor(d3.scale.category20().range())
+					.transitionDuration(250)
+					.stacked(false)
+					.showControls(false);
+
+				chart.yAxis
+					.tickFormat(d3.format(',.2f'));
+
+				d3.select('#medschoolgrads svg')
+					.datum(long_short_data)
+					.call(chart);
+
+				nv.utils.windowResize(chart.update);
+
+				chart.dispatch.on('stateChange', function(e) { nv.log('New State:', JSON.stringify(e)); });
+
+				return chart;
+			});
+
+
+
+		</script>
 
 		<?php
 		$content = ob_get_contents();
