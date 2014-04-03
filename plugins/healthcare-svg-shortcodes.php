@@ -21,7 +21,7 @@ class WSU_Healthcare_Shortcodes {
 		ob_start();
 		?>
 		<script>
-			var json = {
+			var wsumed_county_data_json = {
 				"counties":
 				{
 		<?php
@@ -31,7 +31,7 @@ class WSU_Healthcare_Shortcodes {
 				}
 			};
 			$(function() {
-				var data = json;
+				var data = wsumed_county_data_json;
 				$.each($("svg").find(".counties"),function(){
 					var tar = $(this);
 					var county = tar.attr('id');
