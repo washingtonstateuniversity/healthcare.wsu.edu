@@ -348,11 +348,11 @@ Description: Graph elements to control the colors, lines, and functions
 	padding-right: 1em;
 }
 .resident {
-	background-image: url('/wp-content/themes/wsu-healthcare/assets/images/elements/resident.png');
+	background-image: url('../images/elements/resident.png');
 	
 	}
 .dr {
-	background-image: url('/wp-content/themes/wsu-healthcare/assets/images/elements/dr.png');
+	background-image: url('../images/elements/dr.png');
 		}
 #medschoolgrads .nvtooltip {
 text-align: center;
