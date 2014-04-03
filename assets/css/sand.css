@@ -1,4 +1,4 @@
-/*
+Web/*
  Description:    WSU University Communications Sandbox CSS template file
  Author:         WSU University Communications
  Author URI:     http://ucomm.wsu.edu
@@ -191,7 +191,7 @@ Description: Graph elements to control the colors, lines, and functions
 	position:relative;
 	width:100%;
 	margin-top:1em;
-	margin-bottom:3em;
+	margin-bottom:6em;
 	text-align: center;
 }
 #svg-wa-map svg {
@@ -265,7 +265,6 @@ Description: Graph elements to control the colors, lines, and functions
 #mapKey {
 	height:12px;
 	width:100%;
-	margin-bottom:60px;
 	margin-top:30px;
 }
 .mapLabel {
