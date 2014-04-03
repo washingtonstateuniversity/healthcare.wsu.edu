@@ -55,13 +55,15 @@ padding-right: 99px;
  	font-size:1.8em;
  	line-height:1.5em;
  	padding-top:2em;
+ 	color:#981e32;
+ 	font-weight: 200;
  }
  h3 {
  	text-align: center;
  	font-size:1.2em;
 	text-transform: uppercase;
-	padding-bottom:1em;
-	padding-top:1.2em;
+	padding-bottom:2em;
+	padding-top:2em;
  }
  h4 {
  	font-size:1em;
@@ -112,6 +114,7 @@ Target sectional elements
 	text-align: center;
 	border-top: dashed 1px white;
 	border-bottom: dashed 1px white;
+	color:#fff;
 	}
 .stardust h3 {
 	padding-bottom:0;
@@ -197,7 +200,8 @@ Description: Graph elements to control the colors, lines, and functions
 	height:300px;
 }
 .size-lt-medium #svg-wa-map svg {
-	height:250px;
+	height:260px;
+	margin-left:20%;
 }
 .counties {
 	fill:#F26D4E;
@@ -243,6 +247,7 @@ Description: Graph elements to control the colors, lines, and functions
 #graysHarbor, #grant, #yakima, #whatcom, #wallaWalla, #wahkiakum, #skamania, #pendOreille, #okanogan, #kittitas, #lincoln, #franklin, #ferry, ,#pacific, #mason, #lewis, #klickitat, #kitsap, #jefferson, #island, #garfield, #cowlitz, #columbia, #clallam, #chelan, #benton, #asotin, #adams, #thurston, #stevens, #spokane, #skamania, #sanJuan, {}
 #mapKey {
 	margin-bottom:30px;
+	margin-top:30px;
 	text-align: center;
 	font-size:90%;
 }
@@ -357,11 +362,10 @@ Description: Graph elements to control the colors, lines, and functions
 	float:left;
 		}
 #medschoolgrads {
-  margin: 0;
-  padding: 0;
-
-text-align: left;
- width:90%;
+ margin: 0;
+ padding: 0;
+ text-align: left;
+float:left;
 }
 
 #lmtAccess {
@@ -369,16 +373,14 @@ text-align: left;
 	height:300px;
 	text-align: center;
 	overflow: hidden;
-	margin-left:auto;
-	margin-right:auto;
+	margin-bottom:6em;
 }
 #lmtAccessTwo {
 	width:100%;
 	height:300px;
 	text-align: center;
-	margin-left:auto;
-	margin-right:auto;
 	overflow: hidden;
+	margin-bottom:6em;
 }
 .chartWrap {
   margin: 0;
