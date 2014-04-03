@@ -1,0 +1,17 @@
+# Because OSX
+.DS_Store
+
+# Ignore Sublime project files.
+*.sublime*
+
+# Ignore Vagrant instance files.
+.vagrant
+
+# Ignore PHPStorm project files.
+/.idea
+
+# Ignore node modules required by Grunt.js
+/node_modules
+
+# Ignore the concatenated version of wsumed.js
+/assets/scripts/wsumed.js

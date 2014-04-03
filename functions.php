@@ -17,15 +17,20 @@ function wsumed_enqueue_scripts() {
 	wp_enqueue_script( 'wsumed-nvd3', get_stylesheet_directory_uri() . '/assets/scripts/nv.d3.min.js', array( 'wsumed-d3v3' ), $wsuwp_global_version, false );
 
 	// These scripts load in the footer.
-	wp_enqueue_script( 'wsumed-utils', get_stylesheet_directory_uri() . '/assets/scripts/utils.js', array( 'wsumed-nvd3' ), $wsuwp_global_version, true );
-	wp_enqueue_script( 'wsumed-tooltip', get_stylesheet_directory_uri() . '/assets/scripts/tooltip.js', array( 'wsumed-utils' ), $wsuwp_global_version, true );
-	wp_enqueue_script( 'wsumed-legend', get_stylesheet_directory_uri() . '/assets/scripts/models/legend.js', array( 'wsumed-tooltip' ), $wsuwp_global_version, true );
-	wp_enqueue_script( 'wsumed-axis', get_stylesheet_directory_uri() . '/assets/scripts/models/axis.js', array( 'wsumed-legend' ), $wsuwp_global_version, true );
-	wp_enqueue_script( 'wsumed-horiz', get_stylesheet_directory_uri() . '/assets/scripts/models/multiBarHorizontal.js', array( 'wsumed-axis' ), $wsuwp_global_version, true );
-	wp_enqueue_script( 'wsumed-horizch', get_stylesheet_directory_uri() . '/assets/scripts/models/multiBarHorizontalChart.js', array( 'wsumed-horiz' ), $wsuwp_global_version, true );
-	wp_enqueue_script( 'wsumed-pie', get_stylesheet_directory_uri() . '/assets/scripts/models/pie.js', array( 'wsumed-horizch' ), $wsuwp_global_version, true );
-	wp_enqueue_script( 'wsumed-piech', get_stylesheet_directory_uri() . '/assets/scripts/models/pieChart.js', array( 'wsumed-pie' ), $wsuwp_global_version, true );
-	wp_enqueue_script( 'wsumed-stream', get_stylesheet_directory_uri() . '/assets/scripts/stream_layers.js', array( 'wsumed-piech' ), $wsuwp_global_version, true );
+	if ( defined( SCRIPT_DEBUG ) && SCRIPT_DEBUG ) {
+		wp_enqueue_script( 'wsumed-utils', get_stylesheet_directory_uri() . '/assets/scripts/utils.js', array( 'wsumed-nvd3' ), $wsuwp_global_version, true );
+		wp_enqueue_script( 'wsumed-tooltip', get_stylesheet_directory_uri() . '/assets/scripts/tooltip.js', array( 'wsumed-utils' ), $wsuwp_global_version, true );
+		wp_enqueue_script( 'wsumed-legend', get_stylesheet_directory_uri() . '/assets/scripts/models/legend.js', array( 'wsumed-tooltip' ), $wsuwp_global_version, true );
+		wp_enqueue_script( 'wsumed-axis', get_stylesheet_directory_uri() . '/assets/scripts/models/axis.js', array( 'wsumed-legend' ), $wsuwp_global_version, true );
+		wp_enqueue_script( 'wsumed-horiz', get_stylesheet_directory_uri() . '/assets/scripts/models/multiBarHorizontal.js', array( 'wsumed-axis' ), $wsuwp_global_version, true );
+		wp_enqueue_script( 'wsumed-horizch', get_stylesheet_directory_uri() . '/assets/scripts/models/multiBarHorizontalChart.js', array( 'wsumed-horiz' ), $wsuwp_global_version, true );
+		wp_enqueue_script( 'wsumed-pie', get_stylesheet_directory_uri() . '/assets/scripts/models/pie.js', array( 'wsumed-horizch' ), $wsuwp_global_version, true );
+		wp_enqueue_script( 'wsumed-piech', get_stylesheet_directory_uri() . '/assets/scripts/models/pieChart.js', array( 'wsumed-pie' ), $wsuwp_global_version, true );
+		wp_enqueue_script( 'wsumed-stream', get_stylesheet_directory_uri() . '/assets/scripts/stream_layers.js', array( 'wsumed-piech' ), $wsuwp_global_version, true );
+	} else {
+		wp_enqueue_script( 'wsumed-min', get_stylesheet_directory_uri() . '/assets/scripts/wsumed.min.js', array( 'wsumed-nvd3' ), $wsuwp_global_version, true );
+	}
+
 }
 
 function my_mce_buttons_2($buttons) {	
