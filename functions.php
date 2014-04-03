@@ -13,7 +13,7 @@ function wsumed_enqueue_scripts() {
 	wp_enqueue_script( 'wsu-spine', 'http://repo.wsu.edu/spine/1/spine.js', array( 'wsu-jquery-ui-full' ), $wsuwp_global_version );
 
 	// These scripts are required in the DOM
-	wp_enqueue_script( 'wsumed-d3v3', get_stylesheet_directory_uri() . '/assets/scripts/d3.v3.js', array( 'wsu-spine' ), $wsuwp_global_version, false );
+	wp_enqueue_script( 'wsumed-d3v3', get_stylesheet_directory_uri() . '/assets/scripts/d3.v3.min.js', array( 'wsu-spine' ), $wsuwp_global_version, false );
 	wp_enqueue_script( 'wsumed-nvd3', get_stylesheet_directory_uri() . '/assets/scripts/nv.d3.min.js', array( 'wsumed-d3v3' ), $wsuwp_global_version, false );
 
 	// These scripts load in the footer.
