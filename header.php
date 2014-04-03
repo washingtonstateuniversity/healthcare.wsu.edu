@@ -32,24 +32,12 @@
 	
 	<!-- RESPOND -->
 	<meta name="viewport" content="width=device-width, user-scalable=yes">
-	
+
+	<?php wp_head(); ?>
+
 	<!-- SCRIPTS -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-	<!-- TARGET --><script src="http://repo.wsu.edu/spine/1/spine.min.js"></script><!-- -->
 	<!-- Your supplementary scripts here -->
 	<!-- COMPATIBILITY -->
-<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/scripts/d3.v3.js"></script>
-<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/scripts/nv.d3.js"></script>
-<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/scripts/utils.js"></script>
-<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/scripts/tooltip.js"></script>
-<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/scripts/models/legend.js"></script>
-<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/scripts/models/axis.js"></script>
-<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/scripts/models/multiBarHorizontal.js"></script>
-<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/scripts/models/multiBarHorizontalChart.js"></script>
-<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/scripts/models/pie.js"></script>
-<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/scripts/models/pieChart.js"></script>
-<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/scripts/stream_layers.js"></script>
 	<!--[if lt IE 9]><script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js">IE7_PNG_SUFFIX=".png";</script><![endif]--> 
 <noscript><style>#spine #spine-sitenav ul ul li { display: block !important; }</style></noscript>
 	<!-- DOCS -->
@@ -58,8 +46,7 @@
 	
 	<!-- ANALYTICS -->
 	<!-- Your analytics code here -->
-	
-	<?php wp_head(); ?>
+
 	<script>$ = jQuery;</script>
 
 </head>
