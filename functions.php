@@ -1,6 +1,7 @@
 <?php
 
 // Load healthcare shortcode plugin
+include __DIR__ . '/plugins/healthcare-county-data.php';
 include __DIR__ . '/plugins/healthcare-svg-shortcodes.php';
 
 add_action( 'wp_enqueue_scripts', 'wsumed_enqueue_scripts' );

@@ -24,45 +24,10 @@ class WSU_Healthcare_Shortcodes {
 			var json = {
 				"counties":
 				{
-					"yakima":"<h3>Yakima</h3><h4>Ratio=Pop/Physian - 981.15</h4><h4>Population - 246,000</h4> <h4>Physicians - 209</h4>",
-					"whitman":"<h3>Whitman</h3><h4>Ratio=Pop/Physian - 1,121.95</h4><h4>Population - 45,950</h4> <h4>Physicians - 25</h4>",
-					"whatcom":"<h3>Whatcom</h3><h4>Ratio=Pop/Physian - 753.85</h4><h4>Population - 203,505</h4> <h4>Physicians - 118</h4>",
-					"wallaWalla":"<h3>Walla Walla</h3><h4>Ratio=Pop/Physian - 512.93</h4><h4>Population - 59,100</h4> <h4>Physicians - 57</h4>",
-					"wahkiakum":"<h3>Wahkiakum</h3><h4>Ratio=Pop/Physian - N/A</h4><h4>Population - 4,025</h4> <h4>Physicians - N/A</h4>",
-					"thurston":"<h3>Thurston</h3><h4>Ratio=Pop/Physian - 686.28</h4><h4>Population - 256,800</h4> <h4>Physicians - 205</h4>",
-					"stevens":"<h3>Stevens</h3><h4>Ratio=Pop/Physian - 1,684.62</h4><h4>Population - 43,700</h4> <h4>Physicians - 26</h4>",
-					"spokane":"<h3>Spokane</h3><h4>Ratio=Pop/Physian - 634.92</h4><h4>Population - 475,600</h4> <h4>Physicians - 412</h4>",
-					"snohomish":"<h3>Snohomish</h3><h4>Ratio=Pop/Physian - 1,132.56</h4><h4>Population - 722,900</h4> <h4>Physicians - 382</h4>",
-					"skamania":"<h3>Skamania</h3><h4>Ratio=Pop/Physian - 11,300.00</h4><h4>Population - 11,275</h4> <h4>Physicians - N/A</h4>",
-					"skagit":"<h3>Skagit</h3><h4>Ratio=Pop/Physian - 689.53</h4><h4>Population - 117,950</h4> <h4>Physicians - 145</h4>",
-					"sanJuan":"<h3>San Juan</h3><h4>Ratio=Pop/Physian - 888.89</h4><h4>Population - 15,925</h4> <h4>Physicians - 10</h4>",
-					"pendOreille":"<h3>Pend O'Reille</h3><h4>Ratio=Pop/Physian - 2,191.67</h4><h4>Population - 13,100</h4> <h4>Physicians - 6</h4>",
-					"okanogan":"<h3>Okanogan</h3><h4>Ratio=Pop/Physian - 1,064.10</h4><h4>Population - 41,425</h4> <h4>Physicians - 29</h4>",
-					"kittitas":"<h3>Kittitas</h3><h4>Ratio=Pop/Physian - 1,995.24</h4><h4>Population - 20,600</h4> <h4>Physicians - 27</h4>",
-					"lincoln":"<h3>Lincoln</h3><h4>Ratio=Pop/Physian - 2,135.00</h4><h4>Population - 10,675</h4> <h4>Physicians - 6</h4>",
-					"franklin":"<h3>Franklin</h3><h4>Ratio=Pop/Physian - 1,730.61</h4><h4>Population - 82,500</h4> <h4>Physicians - 35</h4>",
-					"ferry":"<h3>Ferry</h3><h4>Ratio=Pop/Physian - 1,912.50</h4><h4>Population - 7,650</h4> <h4>Physicians - 3</h4>",
-					"pierce":"<h3>Pierce</h3><h4>Ratio=Pop/Physian - 821.07</h4><h4>Population - 808,200</h4> Physicians - 413",
-					"pacific":"<h3>Pacific</h3><h4>Ratio=Pop/Physian - 2,333.33</h4><h4>Population - 20,970</h4> <h4>Physicians - 8</h4>",
-					"mason":"<h3>Mason</h3><h4>Ratio=Pop/Physian - 2,207.14</h4><h4>Population - 61,450</h4> <h4>Physicians - N/A</h4>",
-					"lewis":"<h3>Lewis</h3><h4>Ratio=Pop/Physian - 1,229.03</h4><h4>Population - 76,300</h4> <h4>Physicians - 51</h4>",
-					"klickitat":"<h3>Klickitat</h3><h4>Ratio=Pop/Physian - 1,089.47</h4><h4>Population - 20,600</h4> <h4>Physicians - 11</h4>",
-					"kitsap":"<h3>Kitsap</h3><h4>Ratio=Pop/Physian - 849.50</h4><h4>Population - 254,500</h4> <h4>Physicians - 91</h4>",
-					"king":"<h3>King</h3><h4>Ratio=Pop/Physian - 463.82</h4><h4>Population - 1,957,000</h4> <h4>Physicians - 4,273</h4>",
-					"jefferson":"<h3>Jefferson</h3><h4>Ratio=Pop/Physian - 796.71</h4><h4>Population - 30,175</h4> <h4>Physicians - 21</h4>",
-					"island":"<h3>Island</h3><h4>Ratio=Pop/Physian - 1,398.25</h4><h4>Population - 79,350</h4> <h4>Physicians - 26</h4>",
-					"graysHarbor":"<h3>Grays Harbor</h3><h4>Ratio=Pop/Physian - 1,742.86</h4><h4>Population - 73,150</h4> <h4>Physicians - 43</h4>",
-					"grant":"<h3>Grant</h3><h4>Ratio=Pop/Physian - 2,086.36</h4><h4>Population - 91,000</h4> <h4>Physicians - 49</h4>",
-					"garfield":"<h3>Garfield</h3><h4>Ratio=Pop/Physian - 2,250.00</h4><h4>Population - 2,250</h4> <h4>Physicians - 1</h4>",
-					"douglas":"<h3>Douglas</h3><h4>Ratio=Pop/Physian - 3,570.91</h4><h4>Population - 38,900</h4> <h4>Physicians - 13</h4>",
-					"cowlitz":"<h3>Cowlitz</h3><h4>Ratio=Pop/Physian - 833.06</h4><h4>Population - 103,050</h4> <h4>Physicians - 79</h4>",
-					"columbia":"<h3>Columbia</h3><h4>Ratio=Pop/Physian - 2,050.00</h4><h4>Population - 4,100</h4> <h4>Physicians - 4</h4>",
-					"clark":"<h3>Clark</h3><h4>Ratio=Pop/Physian - 741.91</h4><h4>Population - 431,250</h4> <h4>Physicians - 259</h4>",
-					"clallam":"<h3>Clallam</h3><h4>Ratio=Pop/Physian - 702.43</h4><h4>Population - 72,000</h4> <h4>Physicians - 52</h4>",
-					"chelan":"<h3>Chelan</h3><h4>Ratio=Pop/Physian - 460.00</h4><h4>Population - 73,200</h4> <h4>Physicians - 63</h4>",
-					"benton":"<h3>Benton</h3><h4>Ratio=Pop/Physian - 780.43</h4><h4>Population - 180,000</h4> <h4>Physicians - 63</h4>",
-					"asotin":"<h3>Asotin</h3><<h4>Ratio=Pop/Physian - 872.00</h4>h4>Population - 21,700</h4> <h4>Physicians - 9</h4>",
-					"adams":"<h3>Adams</h3><h4>Ratio=Pop/Physian - 3,200.00</h4><h4>Population - 19,015</h4> <h4>Physicians - 15</h4>",
+		<?php
+			$county_json = get_post_meta( get_the_ID(), '_county_json_data', true );
+			echo $county_json;
+		?>
 				}
 			};
 			$(function() {
