@@ -128,14 +128,16 @@ Target sectional elements
 	margin-bottom:3em;
 }
 .accessory ul {
+	font-size: 1.1em;
+	line-height: 1.2em;
 	margin-top:0;
 	padding-top:0;
 }
 .accessory ul li {
-	padding-bottom:0;
+	padding-bottom:.6em;
 	list-style: none;
 	margin-left:0;
-}
+	}
 .crimson {
 	color:#981e32;
 }
@@ -204,7 +206,6 @@ Description: Graph elements to control the colors, lines, and functions
 	margin-left:20%;
 }
 .counties {
-	fill:#F26D4E;
 	stroke:#5E6A71;
 	width:100%;
 	height:100%;
@@ -220,7 +221,6 @@ Description: Graph elements to control the colors, lines, and functions
 
 }
 .counties:hover {
-	fill:#F24F26;
 	-webkit-transform: translate(0%,-5%);
 	-ms-transform: translate(0%,-5%);
 	-moz-transform: translate(0%,-5%);
