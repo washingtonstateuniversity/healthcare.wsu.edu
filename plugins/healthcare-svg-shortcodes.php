@@ -1320,27 +1320,27 @@ class WSU_Healthcare_Shortcodes {
 				<h4>No. of residents in the U.S. to physician ratio</h4>
 			</header>
 			<div class="justice">
+				<div class="dr"></div>
 				<div class="resident"></div>
 				<div class="resident"></div>
 				<div class="resident"></div>
 				<div class="resident"></div>
 				<div class="resident clip"></div>
-				<div class="dr"></div>
 			</div>
 			<header>
 				<h4>Eastern WA resident to physician ratio</h4>
 			</header>
-			<div class="justice waRatio">
-				<div class="resident"></div>
-				<div class="resident"></div>
-				<div class="resident"></div>
-				<div class="resident"></div>
-				<div class="resident"></div>
-				<div class="resident"></div>
-				<div class="resident"></div>
-				<div class="resident"></div>
-				<div class="resident"></div>
+			<div class="justice">
 				<div class="dr"></div>
+				<div class="resident"></div>
+				<div class="resident"></div>
+				<div class="resident"></div>
+				<div class="resident"></div>
+				<div class="resident"></div>
+				<div class="resident"></div>
+				<div class="resident"></div>
+				<div class="resident"></div>
+				<div class="resident"></div>
 			</div>
 		</div>
 		<?php
