@@ -26,6 +26,10 @@ class WSU_Healthcare_Shortcodes {
 				{
 		<?php
 			$county_json = get_post_meta( get_the_ID(), '_county_json_data', true );
+			// Remove most of the JSON stuff from the actual data to avoid malformity.
+			$county_json = wp_unslash( json_encode( $county_json->counties ) );
+			$county_json = trim( $county_json, '{' );
+			$county_json = trim( $county_json, '}' );
 			echo $county_json;
 		?>
 				}
