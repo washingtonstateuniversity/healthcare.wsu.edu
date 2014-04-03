@@ -12,8 +12,11 @@ function wsumed_enqueue_scripts() {
 	wp_enqueue_script( 'wsu-jquery-ui-full', '//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js', array( 'jquery' ) );
 	wp_enqueue_script( 'wsu-spine', 'http://repo.wsu.edu/spine/1/spine.js', array( 'wsu-jquery-ui-full' ), $wsuwp_global_version );
 
+	// These scripts are required in the DOM
 	wp_enqueue_script( 'wsumed-d3v3', get_stylesheet_directory_uri() . '/assets/scripts/d3.v3.js', array( 'wsu-spine' ), $wsuwp_global_version, false );
 	wp_enqueue_script( 'wsumed-nvd3', get_stylesheet_directory_uri() . '/assets/scripts/nv.d3.js', array( 'wsumed-d3v3' ), $wsuwp_global_version, false );
+
+	// These scripts load in the footer.
 	wp_enqueue_script( 'wsumed-utils', get_stylesheet_directory_uri() . '/assets/scripts/utils.js', array( 'wsumed-nvd3' ), $wsuwp_global_version, true );
 	wp_enqueue_script( 'wsumed-tooltip', get_stylesheet_directory_uri() . '/assets/scripts/tooltip.js', array( 'wsumed-utils' ), $wsuwp_global_version, true );
 	wp_enqueue_script( 'wsumed-legend', get_stylesheet_directory_uri() . '/assets/scripts/models/legend.js', array( 'wsumed-tooltip' ), $wsuwp_global_version, true );
