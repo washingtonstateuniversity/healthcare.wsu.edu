@@ -1081,22 +1081,22 @@ class WSU_Healthcare_Shortcodes {
 		</svg>
 		<div id="mapKey">
 			<div class="mapLabel">
-				<div class="labelLow"></div>
+				<div class="labelLow">30.2+ physicians per 10,000 residents</div>
 			</div>
 			<div class="mapLabel">
-				<div class="labelMidLowest"></div>
+				<div class="labelMidLowest">28 physicians per 10,000 residents</div>
 			</div>
 			<div class="mapLabel">
-				<div class=" labelMidLow"></div>
+				<div class=" labelMidLow">21.9- 24.7 physicians per 10,000 residents</div>
 			</div>
 			<div class="mapLabel">
-				<div class=" labelMidHigh"></div>
+				<div class=" labelMidHigh">14.5-20.3 physicians per 10,000 residents</div>
 			</div>
 			<div class="mapLabel">
-				<div class=" labelMidHigher"></div>
+				<div class=" labelMidHigher">8.7- 13.8 physicians per 10,000 residents</div>
 			</div>
 			<div class="mapLabel">
-				<div class=" labelHighest"></div>
+				<div class=" labelHighest">0-8.1 physicians per 10,000 residents</div>
 			</div>
 		</div>
 		</div>

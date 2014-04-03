@@ -264,7 +264,7 @@ Description: Graph elements to control the colors, lines, and functions
 #mapKey {
 	height:12px;
 	width:100%;
-	margin-bottom:30px;
+	margin-bottom:60px;
 	margin-top:30px;
 }
 .mapLabel {
@@ -273,24 +273,29 @@ Description: Graph elements to control the colors, lines, and functions
 	height: 12px;
 	float:left;
 }
+.labelLow, .labelMidLowest, .labelMidLow, .labelMidHigh, .labelMidHigher, .labelHighest {
+	padding-top:1em;
+	text-align: center;
+	font-size: 90%;
+	line-height: 1.4em;
+}
 .labelLow {
-	background-color:green;
 	border-top:solid 8px #00a651;
 }
 .labelMidLowest {
 	border-top:solid 8px #47b748;
 }
-.labelMidLow{
+.labelMidLow {
 	border-top:solid 8px #8dc73f;	
 }
-.labelMidHigh{
+.labelMidHigh {
 	border-top:solid 8px #f8941d;
 }
 .labelMidHigher {
-border-top:solid 8px #f6811f;
+	border-top:solid 8px #f6811f;
 }
 .labelHighest {
-		border-top:solid 8px #f36c21;
+	border-top:solid 8px #f36c21;
 }
 .tooltip {
 	display:none;
