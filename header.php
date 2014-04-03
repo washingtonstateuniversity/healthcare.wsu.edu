@@ -16,7 +16,7 @@
 
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
     <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--> 
-	<title><?php wp_title( '|', true, 'right' ); ?> Washington State University</title>
+	<title><?php echo esc_html( get_the_title() ) ; ?> | Washington State University</title>
 
 	<!-- Prefetch DNS records if possible for domains that we'll use. -->
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
