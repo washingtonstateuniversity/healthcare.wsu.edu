@@ -1080,23 +1080,23 @@ class WSU_Healthcare_Shortcodes {
 		</g>
 		</svg>
 		<div id="mapKey">
-			<div class="justice">
-				<div class="mapLabel labelLow"></div>
+			<div class="mapLabel">
+				<div class="labelLow"></div>
 			</div>
-			<div class="justice">
-				<div class="mapLabel labelMidLowest"></div>
+			<div class="mapLabel">
+				<div class="labelMidLowest"></div>
 			</div>
-			<div class="justice">
-				<div class="mapLabel labelMidLow"></div>
+			<div class="mapLabel">
+				<div class=" labelMidLow"></div>
 			</div>
-			<div class="justice">
-				<div class="mapLabel labelMidHigh"></div>
+			<div class="mapLabel">
+				<div class=" labelMidHigh"></div>
 			</div>
-			<div class="justice">
-				<div class="mapLabel labelMidHigher"></div>
+			<div class="mapLabel">
+				<div class=" labelMidHigher"></div>
 			</div>
-			<div class="justice">
-				<div class="mapLabel labelHighest"></div>
+			<div class="mapLabel">
+				<div class=" labelHighest"></div>
 			</div>
 		</div>
 		</div>
