@@ -1082,15 +1082,21 @@ class WSU_Healthcare_Shortcodes {
 		<div id="mapKey">
 			<div class="justice">
 				<div class="mapLabel labelLow"></div>
-				<div class="equals">No health Professional Shortage</div>
 			</div>
 			<div class="justice">
-				<div class="mapLabel labelMid"></div>
-				<div class="equals">1%-50% Health Professional Shortage</div>
+				<div class="mapLabel labelMidLowest"></div>
 			</div>
 			<div class="justice">
-				<div class="mapLabel labelHigh"></div>
-				<div class="equals">50%-100% Health Professional Shortage</div>
+				<div class="mapLabel labelMidLow"></div>
+			</div>
+			<div class="justice">
+				<div class="mapLabel labelMidHigh"></div>
+			</div>
+			<div class="justice">
+				<div class="mapLabel labelMidHigher"></div>
+			</div>
+			<div class="justice">
+				<div class="mapLabel labelHighest"></div>
 			</div>
 		</div>
 		</div>

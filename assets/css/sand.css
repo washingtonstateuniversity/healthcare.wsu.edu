@@ -241,53 +241,56 @@ Description: Graph elements to control the colors, lines, and functions
 	fill:#00a651;
 }
 /* Light Blue */
-#wallaWalla {
+#wallaWalla  {
 	fill:#47b748;
 }
 /* Green */
-#thurston,#skagit,#spokane {
-	fill:#8dc73f;
+#thurston, #skagit, #spokane, #whatcom, #asotin  {
+	fill:#8dc73f;	
 }
 /* Yellow */
-#clallam, #clark, #whatcom, #benton, #jefferson, #pierce, #cowlitz, #kitsap, #asotin, #sanJuan, #yakima, #okanogan, #klickitat, #whitman, #snohomish, #lewis, #island, #stevens {
-	fill:#f8941d;
+#clallam, #clark, #benton, #jefferson, #pierce, #cowlitz, #kitsap, #sanJuan, #yakima  {
+	fill:#f8941d;	
 }
 /* Orange */
-#franklin, #graysHarbor, #ferry, #kittitas, #columbia, #grant, #lincoln, #pendOreille, #mason, #garfield, #pacific {
-	fill:#f6811f;
+#graysHarbor, #okanogan, #whitman, #snohomish, #lewis, #island, #stevens, #klickitat  {
+	fill:#f6811f;	
 }
 /* Red */
-#adams, #douglas, #skamania, #wahkiakum {
+#franklin, #ferry, #pacific, #garfield, #adams, #mason, #pendOreille, #lincoln, #kittitas, #grant, #douglas, #columbia, #skamania, #wahkiakum {
 	fill:#f36c21;
 }
 /* */
 #mapKey {
+	height:12px;
+	width:100%;
 	margin-bottom:30px;
 	margin-top:30px;
-	text-align: center;
-	font-size:90%;
 }
 .mapLabel {
 	display:inline-block;
-	width: 1em;
-	height: 1em;
-	background: #d3e1e3;
-	border: solid 1px #333;
-	-moz-border-radius: 50px;
-	-webkit-border-radius: 50px;
-	border-radius: 50px;
-	vertical-align: top;
-	margin:.175em;
+	width: 16%;
+	height: 12px;
 	float:left;
 }
 .labelLow {
-	background-color:#F2EDDB;
+	background-color:green;
+	border-top:solid 8px #00a651;
 }
-.labelMid {
-	background-color:#EEEF8D;
+.labelMidLowest {
+	border-top:solid 8px #47b748;
 }
-.labelHigh {
-	background-color:#F26D4E;
+.labelMidLow{
+	border-top:solid 8px #8dc73f;	
+}
+.labelMidHigh{
+	border-top:solid 8px #f8941d;
+}
+.labelMidHigher {
+border-top:solid 8px #f6811f;
+}
+.labelHighest {
+		border-top:solid 8px #f36c21;
 }
 .tooltip {
 	display:none;
