@@ -3,6 +3,16 @@
 // Load healthcare shortcode plugin
 include __DIR__ . '/plugins/healthcare-svg-shortcodes.php';
 
+add_action( 'wp_enqueue_scripts', 'wsumed_enqueue_scripts' );
+/**
+ * Enqueue scripts used on the front end of the medicine.wsu.edu theme.
+ */
+function wsumed_enqueue_scripts() {
+	global $wsuwp_global_version;
+	wp_enqueue_script( 'wsu-jquery-ui-full', '//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js', array( 'jquery' ) );
+	wp_enqueue_script( 'wsu-spine', 'http://repo.wsu.edu/spine/1/spine.js', array( 'wsu-jquery-ui-full' ), $wsuwp_global_version );
+}
+
 function my_mce_buttons_2($buttons) {	
 	/**
 	 * Add in a core button that's disabled by default

@@ -36,9 +36,6 @@
 	<?php wp_head(); ?>
 
 	<!-- SCRIPTS -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-	<!-- TARGET --><script src="http://repo.wsu.edu/spine/1/spine.min.js"></script><!-- -->
 	<!-- Your supplementary scripts here -->
 	<!-- COMPATIBILITY -->
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/scripts/d3.v3.js"></script>
