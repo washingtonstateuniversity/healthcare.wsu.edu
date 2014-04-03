@@ -236,16 +236,31 @@ Description: Graph elements to control the colors, lines, and functions
 	transition-duration: 3s;
 	cursor: pointer;
 }
-#king {
-	fill:#F2EDDB;
+/* Blue */
+#king, #chelan {
+	fill:#2674d6;
 }
-#clark,#pierce,#snohomish,#skagit,#spokane {
-	fill:#EEEF8D;
+/* Light Blue */
+#wallaWalla {
+	fill:#18a9d7;
 }
-#king:hover, #clark:hover,#pierce:hover,#snohomish:hover,#skagit:hover,#spokane:hover {
-	fill:#F24F26;
+/* Green */
+#thurston,#skagit,#spokane {
+	fill:#78a13c;
 }
-#graysHarbor, #grant, #yakima, #whatcom, #wallaWalla, #wahkiakum, #skamania, #pendOreille, #okanogan, #kittitas, #lincoln, #franklin, #ferry, ,#pacific, #mason, #lewis, #klickitat, #kitsap, #jefferson, #island, #garfield, #cowlitz, #columbia, #clallam, #chelan, #benton, #asotin, #adams, #thurston, #stevens, #spokane, #skamania, #sanJuan, {}
+/* Yellow */
+#clallam, #clark, #whatcom, #benton, #jefferson, #pierce, #cowlitz, #kitsap, #asotin, #sanJuan, #yakima, #okanogan, #klickitat, #whitman, #snohomish, #lewis, #island, #stevens {
+	fill:#e4ca25;
+}
+/* Orange */
+#franklin, #graysHarbor, #ferry, #kittitas, #columbia, #grant, #lincoln, #pendOreille, #mason, #garfield, #pacific {
+	fill:#d78727;
+}
+/* Red */
+#adams, #douglas, #skamania, #wahkiakum {
+	fill:#c43239;
+}
+/* */
 #mapKey {
 	margin-bottom:30px;
 	margin-top:30px;
@@ -319,13 +334,18 @@ Description: Graph elements to control the colors, lines, and functions
 .tooltip h3 {
   background-color: rgba(247,247,247,0.75);
   font-size:1.2em;
-  padding-bottom:12px;
+  padding-top:0;
+  padding-left:0;
+  padding-right:0;
+  padding-bottom:4px;
+  margin-bottom:8px;
 }
 .tooltip h4 {
 	font-size:1.1em;
 	text-transform: capitalize;
 	font-weight: normal;
 	display:block;
+	padding:2px;
 }
 #rdRatio {
 	text-align: center;
