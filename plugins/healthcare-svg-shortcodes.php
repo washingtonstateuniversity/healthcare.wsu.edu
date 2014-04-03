@@ -36,7 +36,7 @@ class WSU_Healthcare_Shortcodes {
 					"skamania":"<h3>Skamania</h3><h4>Ratio=Pop/Physian - 11,300.00</h4><h4>Population - 11,275</h4> <h4>Physicians - N/A</h4>",
 					"skagit":"<h3>Skagit</h3><h4>Ratio=Pop/Physian - 689.53</h4><h4>Population - 117,950</h4> <h4>Physicians - 145</h4>",
 					"sanJuan":"<h3>San Juan</h3><h4>Ratio=Pop/Physian - 888.89</h4><h4>Population - 15,925</h4> <h4>Physicians - 10</h4>",
-					"pendOreille":"<h3>Pend O'Reille</h3><<h4>Ratio=Pop/Physian - 2,191.67</h4>h4>Population - 13,100</h4> <h4>Physicians - 6</h4>",
+					"pendOreille":"<h3>Pend O'Reille</h3><h4>Ratio=Pop/Physian - 2,191.67</h4><h4>Population - 13,100</h4> <h4>Physicians - 6</h4>",
 					"okanogan":"<h3>Okanogan</h3><h4>Ratio=Pop/Physian - 1,064.10</h4><h4>Population - 41,425</h4> <h4>Physicians - 29</h4>",
 					"kittitas":"<h3>Kittitas</h3><h4>Ratio=Pop/Physian - 1,995.24</h4><h4>Population - 20,600</h4> <h4>Physicians - 27</h4>",
 					"lincoln":"<h3>Lincoln</h3><h4>Ratio=Pop/Physian - 2,135.00</h4><h4>Population - 10,675</h4> <h4>Physicians - 6</h4>",
