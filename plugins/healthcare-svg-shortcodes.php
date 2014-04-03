@@ -1136,7 +1136,7 @@ class WSU_Healthcare_Shortcodes {
 				{
 					key: "Admitted",
 					y: 235
-				},
+				}
 			];
 
 
@@ -1171,7 +1171,7 @@ class WSU_Healthcare_Shortcodes {
 				{
 					key: "Admitted",
 					y: 120
-				},
+				}
 			];
 
 
@@ -1235,10 +1235,10 @@ class WSU_Healthcare_Shortcodes {
 						{
 							"label" : "Missouri" ,
 							"value" : 15.2 
-						} ,
+						}
 
 					]
-				},
+				}
 
 			];
 
