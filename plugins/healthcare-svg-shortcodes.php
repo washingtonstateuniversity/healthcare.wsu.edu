@@ -1274,7 +1274,7 @@ class WSU_Healthcare_Shortcodes {
 				chart = nv.models.multiBarHorizontalChart()
 					.x(function(d) { return d.label })
 					.y(function(d) { return d.value })
-					.margin({top: 30, right: 20, bottom: 50, left: 80})
+					.margin({top: 30, right: 20, bottom: 50, left: 90})
 					//.showValues(true)
 					.tooltips(true)
 					//.barColor(d3.scale.category20().range())
@@ -1328,7 +1328,7 @@ class WSU_Healthcare_Shortcodes {
 				<div class="resident clip"></div>
 			</div>
 			<header>
-				<h4>Eastern WA resident to physician ratio</h4>
+				<h4>Rural Washington resident to physician ratio</h4>
 			</header>
 			<div class="justice">
 				<div class="dr"></div>
