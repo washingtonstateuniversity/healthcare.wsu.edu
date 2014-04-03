@@ -217,6 +217,7 @@ Description: Graph elements to control the colors, lines, and functions
 	-moz-transform-origin:center;
 	transform-origin: center;
 	stroke-miterlimit:10;
+
 }
 .counties:hover {
 	fill:#F24F26;
@@ -329,43 +330,32 @@ Description: Graph elements to control the colors, lines, and functions
 #rdRatio {
 	text-align: center;
 }
-.resident {
+.resident,.dr{
 	display:inline-block;
-	width: 1em;
-	height: 1em;
-	background: #F26D4E;
-	border: solid 1px #333;
-	-moz-border-radius: 50px;
-	-webkit-border-radius: 50px;
-	border-radius: 50px;
+	width: 2em;
+	height: 6em;
+	background-repeat: no-repeat;
+	background-position:center;
+	background-size: 100% auto;
 	vertical-align: bottom;
 	margin:.175em;
-		float:left;
-	}
-.equals {
-	display:inline-block;
-	vertical-align: middle;
-	margin:.175em;
 	float:left;
+ 	opacity:0.8;
+	filter:alpha(opacity=80); /* For IE8 and earlier */
 }
+.clip {
+	background-clip: content-box;
+	padding-right: 1em;
+}
+.resident {
+	background-image: url('/wp-content/themes/wsu-healthcare/assets/images/elements/resident.png');
+	
+	}
 .dr {
-	display:inline-block;
-	width: 1em;
-	height: 1em;
-	background: #F2EDDB;
-	border: solid 1px #333;
-	-moz-border-radius: 50px;
-	-webkit-border-radius: 50px;
-	border-radius: 50px;
-	vertical-align: bottom;	
-	margin:.175em;
-	float:left;
+	background-image: url('/wp-content/themes/wsu-healthcare/assets/images/elements/dr.png');
 		}
-#medschoolgrads {
- margin: 0;
- padding: 0;
- text-align: left;
-float:left;
+#medschoolgrads .nvtooltip {
+text-align: center;
 }
 
 #lmtAccess {
@@ -408,9 +398,6 @@ float:left;
   padding: 1px;
   border: 1px solid rgba(0,0,0,.2);
   z-index: 10000;
-
-  font-family: Arial;
-  font-size: 13px;
   text-align: left;
   pointer-events: none;
 
@@ -456,7 +443,7 @@ float:left;
 }
 .nvtooltip p {
   margin: 0;
-  padding: 5px 14px;
+  padding: 0 0;
   margin:0;
   text-align: center;
   color:;
