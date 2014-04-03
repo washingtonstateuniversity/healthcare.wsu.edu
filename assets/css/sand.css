@@ -55,13 +55,15 @@ padding-right: 99px;
  	font-size:1.8em;
  	line-height:1.5em;
  	padding-top:2em;
+ 	color:#981e32;
+ 	font-weight: 200;
  }
  h3 {
  	text-align: center;
  	font-size:1.2em;
 	text-transform: uppercase;
-	padding-bottom:1em;
-	padding-top:1.2em;
+	padding-bottom:2em;
+	padding-top:2em;
  }
  h4 {
  	font-size:1em;
@@ -112,6 +114,7 @@ Target sectional elements
 	text-align: center;
 	border-top: dashed 1px white;
 	border-bottom: dashed 1px white;
+	color:#fff;
 	}
 .stardust h3 {
 	padding-bottom:0;
@@ -197,7 +200,8 @@ Description: Graph elements to control the colors, lines, and functions
 	height:300px;
 }
 .size-lt-medium #svg-wa-map svg {
-	height:250px;
+	height:260px;
+	margin-left:20%;
 }
 .counties {
 	fill:#F26D4E;
@@ -213,6 +217,7 @@ Description: Graph elements to control the colors, lines, and functions
 	-moz-transform-origin:center;
 	transform-origin: center;
 	stroke-miterlimit:10;
+
 }
 .counties:hover {
 	fill:#F24F26;
@@ -243,6 +248,7 @@ Description: Graph elements to control the colors, lines, and functions
 #graysHarbor, #grant, #yakima, #whatcom, #wallaWalla, #wahkiakum, #skamania, #pendOreille, #okanogan, #kittitas, #lincoln, #franklin, #ferry, ,#pacific, #mason, #lewis, #klickitat, #kitsap, #jefferson, #island, #garfield, #cowlitz, #columbia, #clallam, #chelan, #benton, #asotin, #adams, #thurston, #stevens, #spokane, #skamania, #sanJuan, {}
 #mapKey {
 	margin-bottom:30px;
+	margin-top:30px;
 	text-align: center;
 	font-size:90%;
 }
@@ -324,44 +330,32 @@ Description: Graph elements to control the colors, lines, and functions
 #rdRatio {
 	text-align: center;
 }
-.resident {
+.resident,.dr{
 	display:inline-block;
-	width: 1em;
-	height: 1em;
-	background: #F26D4E;
-	border: solid 1px #333;
-	-moz-border-radius: 50px;
-	-webkit-border-radius: 50px;
-	border-radius: 50px;
+	width: 2em;
+	height: 6em;
+	background-repeat: no-repeat;
+	background-position:center;
+	background-size: 100% auto;
 	vertical-align: bottom;
 	margin:.175em;
-		float:left;
-	}
-.equals {
-	display:inline-block;
-	vertical-align: middle;
-	margin:.175em;
 	float:left;
+ 	opacity:0.8;
+	filter:alpha(opacity=80); /* For IE8 and earlier */
 }
+.clip {
+	background-clip: content-box;
+	padding-right: 1em;
+}
+.resident {
+	background-image: url('../images/elements/resident.png');
+	
+	}
 .dr {
-	display:inline-block;
-	width: 1em;
-	height: 1em;
-	background: #F2EDDB;
-	border: solid 1px #333;
-	-moz-border-radius: 50px;
-	-webkit-border-radius: 50px;
-	border-radius: 50px;
-	vertical-align: bottom;	
-	margin:.175em;
-	float:left;
+	background-image: url('../images/elements/dr.png');
 		}
-#medschoolgrads {
-  margin: 0;
-  padding: 0;
-
-text-align: left;
- width:90%;
+#medschoolgrads .nvtooltip {
+text-align: center;
 }
 
 #lmtAccess {
@@ -369,16 +363,14 @@ text-align: left;
 	height:300px;
 	text-align: center;
 	overflow: hidden;
-	margin-left:auto;
-	margin-right:auto;
+	margin-bottom:6em;
 }
 #lmtAccessTwo {
 	width:100%;
 	height:300px;
 	text-align: center;
-	margin-left:auto;
-	margin-right:auto;
 	overflow: hidden;
+	margin-bottom:6em;
 }
 .chartWrap {
   margin: 0;
@@ -406,9 +398,6 @@ text-align: left;
   padding: 1px;
   border: 1px solid rgba(0,0,0,.2);
   z-index: 10000;
-
-  font-family: Arial;
-  font-size: 13px;
   text-align: left;
   pointer-events: none;
 
@@ -454,7 +443,7 @@ text-align: left;
 }
 .nvtooltip p {
   margin: 0;
-  padding: 5px 14px;
+  padding: 0 0;
   margin:0;
   text-align: center;
   color:;

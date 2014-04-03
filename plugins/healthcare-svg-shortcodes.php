@@ -1258,7 +1258,7 @@ class WSU_Healthcare_Shortcodes {
 						} ,
 						{
 							"label" : "Missouri" ,
-							"value" : 15.2
+							"value" : 15.2 
 						} ,
 
 					]
@@ -1274,10 +1274,10 @@ class WSU_Healthcare_Shortcodes {
 				chart = nv.models.multiBarHorizontalChart()
 					.x(function(d) { return d.label })
 					.y(function(d) { return d.value })
-					.margin({top: 30, right: 20, bottom: 50, left: 175})
+					.margin({top: 30, right: 20, bottom: 50, left: 80})
 					//.showValues(true)
-					//.tooltips(false)
-					.barColor(d3.scale.category20().range())
+					.tooltips(true)
+					//.barColor(d3.scale.category20().range())
 					.transitionDuration(250)
 					.stacked(false)
 					.showControls(false);
@@ -1324,19 +1324,13 @@ class WSU_Healthcare_Shortcodes {
 				<div class="resident"></div>
 				<div class="resident"></div>
 				<div class="resident"></div>
-				<div class="resident"></div>
-				<div class="resident"></div>
-				<div class="resident"></div>
-				<div class="resident"></div>
-				<div class="resident"></div>
-				<div class="equals">:</div>
-				<div class="dr"></div>
+				<div class="resident clip"></div>
 				<div class="dr"></div>
 			</div>
 			<header>
 				<h4>Eastern WA resident to physician ratio</h4>
 			</header>
-			<div class="justice">
+			<div class="justice waRatio">
 				<div class="resident"></div>
 				<div class="resident"></div>
 				<div class="resident"></div>
@@ -1346,7 +1340,6 @@ class WSU_Healthcare_Shortcodes {
 				<div class="resident"></div>
 				<div class="resident"></div>
 				<div class="resident"></div>
-				<div class="equals">:</div>
 				<div class="dr"></div>
 			</div>
 		</div>
