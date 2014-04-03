@@ -170,7 +170,7 @@ Target sectional elements
 .pic3 {
 	background-image: url('../images/elements/farmerSon.jpg');
 	background-size:100% auto;
-	background-position: 0 0;
+	background-position: 0 15%;
 	background-repeat: no-repeat;
 }
 footer {
@@ -267,9 +267,6 @@ Description: Graph elements to control the colors, lines, and functions
 	text-align: center;
 	font-size:90%;
 }
-.justice {
-	display:inline-block;
-}
 .mapLabel {
 	display:inline-block;
 	width: 1em;
@@ -348,10 +345,11 @@ Description: Graph elements to control the colors, lines, and functions
 	padding:2px;
 }
 #rdRatio {
-	text-align: center;
 }
-.resident,.dr{
+.justice {
 	display:inline-block;
+}
+.resident, .dr{
 	width: 2em;
 	height: 6em;
 	background-repeat: no-repeat;
@@ -364,12 +362,12 @@ Description: Graph elements to control the colors, lines, and functions
 	filter:alpha(opacity=80); /* For IE8 and earlier */
 }
 .clip {
-	background-clip: content-box;
-	padding-right: 1em;
+	width:1em;
+	background-size: 200%;
+	background-position: left;
 }
 .resident {
 	background-image: url('../images/elements/resident.png');
-	
 	}
 .dr {
 	background-image: url('../images/elements/dr.png');
