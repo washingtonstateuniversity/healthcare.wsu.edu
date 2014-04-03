@@ -238,27 +238,27 @@ Description: Graph elements to control the colors, lines, and functions
 }
 /* Blue */
 #king, #chelan {
-	fill:#2674d6;
+	fill:#00a651;
 }
 /* Light Blue */
 #wallaWalla {
-	fill:#18a9d7;
+	fill:#47b748;
 }
 /* Green */
 #thurston,#skagit,#spokane {
-	fill:#78a13c;
+	fill:#8dc73f;
 }
 /* Yellow */
 #clallam, #clark, #whatcom, #benton, #jefferson, #pierce, #cowlitz, #kitsap, #asotin, #sanJuan, #yakima, #okanogan, #klickitat, #whitman, #snohomish, #lewis, #island, #stevens {
-	fill:#e4ca25;
+	fill:#f8941d;
 }
 /* Orange */
 #franklin, #graysHarbor, #ferry, #kittitas, #columbia, #grant, #lincoln, #pendOreille, #mason, #garfield, #pacific {
-	fill:#d78727;
+	fill:#f6811f;
 }
 /* Red */
 #adams, #douglas, #skamania, #wahkiakum {
-	fill:#c43239;
+	fill:#f6811f;
 }
 /* */
 #mapKey {
