@@ -9,7 +9,7 @@
 
 wp_footer();
 
-$share_text = urlencode( get_the_title() . ' | Washington State University' );
+$share_text = esc_js( urlencode( html_entity_decode( get_the_title() . ' | Washington State University' ) ) );
 $share_url = urlencode( get_home_url() );
 
 ?>
