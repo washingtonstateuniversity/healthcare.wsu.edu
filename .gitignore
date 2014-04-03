@@ -12,3 +12,6 @@
 
 # Ignore node modules required by Grunt.js
 /node_modules
+
+# Ignore the concatenated version of wsumed.js
+/assets/scripts/wsumed.js
