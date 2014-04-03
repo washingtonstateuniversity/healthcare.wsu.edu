@@ -17,7 +17,12 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
     <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--> 
 	<title><?php wp_title( '|', true, 'right' ); ?> Washington State University</title>
-	
+
+	<!-- Prefetch DNS records if possible for domains that we'll use. -->
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//themes.googleusercontent.com">
+	<link rel="dns-prefetch" href="//www.google-analytics.com">
+
 	<!-- CONTACT -->
 	<?php get_template_part('parts/head','contact'); ?> 
 	
