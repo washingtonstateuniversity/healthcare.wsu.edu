@@ -706,3 +706,8 @@ Interactive Layers
 .nvd3 line.nv-guideline {
   stroke: #ccc;
 }
+
+.admin-bar #spine.cropped {
+	height: 230px;
+	min-height: 230px;
+}
