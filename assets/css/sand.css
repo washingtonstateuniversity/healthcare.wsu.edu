@@ -14,8 +14,8 @@ Description: Styling to handle the framework
 	-moz-osx-font-smoothing: grayscale;
  }
  .size-gt-medium .recto.verso {
-padding-left: 99px;
-padding-right: 99px;
+	padding-left: 99px;
+	padding-right: 99px;
 }
  body{
  	color:#464e54;
@@ -200,12 +200,21 @@ Description: Graph elements to control the colors, lines, and functions
 	width:100%;
 }
 .size-lt-large #svg-wa-map svg {
-	height:300px;
+	height:400px;
 }
 .size-lt-medium #svg-wa-map svg {
-	height:260px;
-	margin-left:20%;
+	height:350px;
 }
+@media all and (max-width : 500px) {
+.size-lt-medium #svg-wa-map svg {
+	height:250px;
+	}
+} 
+@media all and (max-width : 400px) {
+.size-lt-medium #svg-wa-map svg {
+	height:180px;
+	}
+} 
 .counties {
 	stroke:#5E6A71;
 	width:100%;
