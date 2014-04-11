@@ -180,6 +180,23 @@ footer {
 	text-align: center;
 	margin-bottom:1em;
 }
+.accessory .mediaColumns {
+	margin-bottom:9.8em;
+
+}
+.accessory ul li.cone {
+	display:inline-block;
+	margin-left:0em;
+	width:50%;
+}
+.accessory ul li.ctwo {
+	margin-left:25em;
+	 margin-top: -7.8em;
+	width:50%;
+}
+.accessory hr {
+	clear: both;
+}
 /*
 Title: Graphs and Maps
 Description: Graph elements to control the colors, lines, and functions
