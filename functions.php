@@ -11,7 +11,7 @@ add_action( 'wp_enqueue_scripts', 'wsumed_enqueue_scripts' );
 function wsumed_enqueue_scripts() {
 	global $wsuwp_global_version;
 	wp_enqueue_script( 'wsu-jquery-ui-full', '//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js', array( 'jquery' ) );
-	wp_enqueue_script( 'wsu-spine', 'http://repo.wsu.edu/spine/1/spine.js', array( 'wsu-jquery-ui-full' ), $wsuwp_global_version );
+	wp_enqueue_script( 'wsu-spine', '//repo.wsu.edu/spine/1/spine.js', array( 'wsu-jquery-ui-full' ), $wsuwp_global_version );
 
 	// These scripts are required in the DOM
 	wp_enqueue_script( 'wsumed-d3v3', get_stylesheet_directory_uri() . '/assets/scripts/d3.v3.min.js', array( 'wsu-spine' ), $wsuwp_global_version, false );
