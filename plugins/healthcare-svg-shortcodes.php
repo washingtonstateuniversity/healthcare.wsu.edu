@@ -21,44 +21,44 @@ class WSU_Healthcare_Shortcodes {
 		ob_start();
 		?>
 		<script>
-			var wsumed_county_data_json = {
-				"counties":
-				{
-		<?php
-			$county_json = get_post_meta( get_the_ID(), '_county_json_data', true );
-			// Remove most of the JSON stuff from the actual data to avoid malformity.
-			$county_json = wp_unslash( json_encode( $county_json->counties ) );
-			$county_json = trim( $county_json, '{' );
-			$county_json = trim( $county_json, '}' );
-			echo $county_json;
-		?>
-				}
-			};
-			(function($,wsumed_county_data_json) {
-				var data = wsumed_county_data_json;
-				$.each($("svg").find(".counties"),function(){
-					var tar = $(this);
-					var county = tar.attr('id');
-					var title = data.counties[county]; //tar.find('title').data('title'); I couldn't cancel the default tooltip with out lot of code
-					if(title!=""){
-						tar.hover(function(){
-							$('<div class="tooltip">TEXT HERE</div>')
-								.html(title)
-								.appendTo('body')
-								.fadeIn('slow');
-						}, function() {
-							$('.tooltip').remove();
-						}).mousemove(function(e) {
-							var vCenter = $('.tooltip').outerWidth();
-							var mousex = e.pageX - ( vCenter / 2 ); //Get X coordinates
-							var mousey = e.pageY - $('.tooltip').outerHeight() - 20; //Get Y coordinates
-							$('.tooltip').css({ top: mousey, left: mousex });
-						});
+			(function($) {
+				var data = {
+					"counties":
+					{
+						<?php
+							$county_json = get_post_meta( get_the_ID(), '_county_json_data', true );
+							// Remove most of the JSON stuff from the actual data to avoid malformity.
+							$county_json = wp_unslash( json_encode( $county_json->counties ) );
+							$county_json = trim( $county_json, '{' );
+							$county_json = trim( $county_json, '}' );
+							echo $county_json;
+						?>
 					}
+				};
+				$(document ).ready(function(){
+					$.each($("svg").find(".counties"),function(){
+						var tar = $(this);
+						var county = tar.attr('id');
+						var title = data.counties[county]; //tar.find('title').data('title'); I couldn't cancel the default tooltip with out lot of code
+						if(title!=""){
+							tar.hover(function(){
+								$('<div class="tooltip">TEXT HERE</div>')
+									.html(title)
+									.appendTo('body')
+									.fadeIn('slow');
+							}, function() {
+								$('.tooltip').remove();
+							}).mousemove(function(e) {
+								var vCenter = $('.tooltip').outerWidth();
+								var mousex = e.pageX - ( vCenter / 2 ); //Get X coordinates
+								var mousey = e.pageY - $('.tooltip').outerHeight() - 20; //Get Y coordinates
+								$('.tooltip').css({ top: mousey, left: mousex });
+							});
+						}
+					});
 				});
-			}(jQuery, wsumed_county_data_json));
+			}(jQuery));
 		</script>
-
 
 		<div id="svg-wa-map">
 		<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="670" height="405" viewBox="0 0 670 405" preserveAspectRatio="xMinYMin meet">
