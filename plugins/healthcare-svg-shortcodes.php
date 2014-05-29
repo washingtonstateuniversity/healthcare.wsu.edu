@@ -34,7 +34,7 @@ class WSU_Healthcare_Shortcodes {
 		?>
 				}
 			};
-			$(function() {
+			(function($,wsumed_county_data_json) {
 				var data = wsumed_county_data_json;
 				$.each($("svg").find(".counties"),function(){
 					var tar = $(this);
@@ -56,7 +56,7 @@ class WSU_Healthcare_Shortcodes {
 						});
 					}
 				});
-			});
+			}(jQuery, wsumed_county_data_json));
 		</script>
 
 
