@@ -8,5 +8,737 @@
  Version:        0.0.1
 */
 
-@import url("assets/css/sand.css");
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700);
+
+/*
+Title: Main Body
+Description: Styling to handle the framework
+*/
+* {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.size-gt-medium .recto.verso {
+	padding-left: 99px;
+	padding-right: 99px;
+}
+body{
+	color:#464e54;
+	font-family: 'open sans', lucida sans, sans serif;
+	background-color: #f4f4f4;
+}
+strong, b {
+	font-family: 'open sans'!important;
+	font-weight: 600;
+}
+p, ul, ol {
+	padding-top:1.2em;
+	padding-bottom:1em;
+	font-size:1.2em;
+	line-height: 1.6em;
+	text-align: left;
+	font-weight:400;
+}
+ul {
+	margin-bottom:1em;
+}
+article p:last-child {
+	margin-bottom:4em;
+}
+ul, ol {
+	font-size:1.2em;
+	margin-bottom:0;
+	padding-bottom:2em;
+}
+h1 {
+	font-size: 2.6em;
+	padding-top:5em;
+	padding-bottom:1em;
+	text-align: center;
+}
+h2 {
+	font-size:1.8em;
+	line-height:1.5em;
+	padding-top:2em;
+	color:#981e32;
+	font-weight: 200;
+}
+h3 {
+	text-align: center;
+	font-size:1.2em;
+	text-transform: uppercase;
+	padding-bottom:2em;
+	padding-top:2em;
+}
+h4 {
+	font-size:1em;
+	padding-bottom:.875em;
+}
+.spine-bookmark {
+	display:none;
+}
+/*
+Title: Page elements
+Description: Elements to create a unified page with a single presentation of content
+*/
+.headbg {
+	background-image: url('../images/elements/counties.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 170% auto;
+}
+.size-lt-medium .stardust p {
+	margin-left:16px;
+	margin-right:16px;
+}
+.size-lt-medium .stardust h1 {
+	margin-left:16px;
+	margin-right:16px;
+}
+.size-lt-medium .stardust h2 {
+	margin-left:16px;
+	margin-right:16px;
+}
+/*******************
+Target sectional elements
+*/
+.stardust {
+	background-color: #585858;
+	color:white;
+}
+.stardust p {
+	font-size:1.8em;
+}
+.stardust h1 {
+	padding-top:1em;
+}
+.stardust h2 {
+	margin-top:0;
+	padding-top:1em;
+	padding-bottom:1em;
+	text-align: center;
+	border-top: dashed 1px white;
+	border-bottom: dashed 1px white;
+	color:#fff;
+}
+.stardust h3 {
+	padding-bottom:0;
+	padding-top:2em;
+}
+.stardust-twenty {
+	background-color:white;
+}
+.accessory {
+	margin-top:3em;
+	margin-bottom:3em;
+}
+.accessory ul {
+	font-size: 1.1em;
+	line-height: 1.2em;
+	margin-top:0;
+	padding-top:0;
+}
+.accessory ul li {
+	padding-bottom:.6em;
+	list-style: none;
+	margin-left:0;
+}
+.crimson {
+	color:#981e32;
+}
+.crimsonBB {
+	border-bottom:solid 16px #981e32;
+}
+.pic1, .pic2, .pic3 {
+	width:100%;
+	height:30em;
+}
+.size-lt-medium .pic1{
+	height:15em;
+}
+.size-lt-medium .pic3 {
+	height:15em;
+}
+.size-lt-medium .pic2 {
+	height:15em;
+}
+.pic1 {
+	background-image: url('../images/elements/spokaneCampus.jpg');
+	background-size:100% auto;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+}
+.pic2 {
+	background-image: url('../images/elements/nursingStevens.jpg');
+	background-size:100% auto;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+}
+.pic3 {
+	background-image: url('../images/elements/farmerSon.jpg');
+	background-size:100% auto;
+	background-position: 0 15%;
+	background-repeat: no-repeat;
+}
+footer {
+	font-size: 90%;
+	text-align: center;
+	margin-bottom:1em;
+}
+.accessory .mediaColumns {
+	margin-bottom:9.8em;
+
+}
+.accessory ul li.cone {
+	display:inline-block;
+	margin-left:0em;
+	width:50%;
+}
+.accessory ul li.ctwo {
+	margin-left:25em;
+	margin-top: -7.8em;
+	width:50%;
+}
+.accessory hr {
+	clear: both;
+}
+/*
+Title: Graphs and Maps
+Description: Graph elements to control the colors, lines, and functions
+*/
+/********************
+  Map
+*/
+#svg-wa-map {
+	position:relative;
+	width:100%;
+	margin-top:1em;
+	margin-bottom:6em;
+	text-align: center;
+}
+#svg-wa-map svg {
+	overflow: hidden;
+	display:block;
+	width:100%;
+}
+.size-lt-large #svg-wa-map svg {
+	height:400px;
+}
+.size-lt-medium #svg-wa-map svg {
+	height:350px;
+}
+@media all and (max-width : 500px) {
+	.size-lt-medium #svg-wa-map svg {
+		height:250px;
+	}
+}
+@media all and (max-width : 400px) {
+	.size-lt-medium #svg-wa-map svg {
+		height:180px;
+	}
+}
+.counties {
+	stroke:#5E6A71;
+	width:100%;
+	height:100%;
+	-webkit-transform: translate(0%,0%);
+	-ms-transform: translate(0%,0%);
+	-moz-transform: translate(0%,0%);
+	transform: translate(0%,0%);
+	-webkit-transform-origin: center;
+	-ms-transform-origin: center;
+	-moz-transform-origin:center;
+	transform-origin: center;
+	stroke-miterlimit:10;
+
+}
+.counties:hover {
+	-webkit-transform: translate(0%,-5%);
+	-ms-transform: translate(0%,-5%);
+	-moz-transform: translate(0%,-5%);
+	transform: translate(0%,-5%);
+	-webkit-transform-origin: center;
+	-ms-transform-origin: center;
+	-moz-transform-origin:center;
+	transform-origin: center;
+	-webkit-transition-property: transform;
+	-ms-transition-property: transform;
+	-moz-transition-property: transform;
+	transition-property: transform;
+	transition-duration: 3s;
+	cursor: pointer;
+}
+/* Blue */
+#king, #chelan {
+	fill:#00a651;
+}
+/* Light Blue */
+#wallaWalla  {
+	fill:#47b748;
+}
+/* Green */
+#thurston, #skagit, #spokane, #whatcom, #asotin  {
+	fill:#8dc73f;
+}
+/* Yellow */
+#clallam, #clark, #benton, #jefferson, #pierce, #cowlitz, #kitsap, #sanJuan, #yakima  {
+	fill:#f8941d;
+}
+/* Orange */
+#graysHarbor, #okanogan, #whitman, #snohomish, #lewis, #island, #stevens, #klickitat  {
+	fill:#f6811f;
+}
+/* Red */
+#franklin, #ferry, #pacific, #garfield, #adams, #mason, #pendOreille, #lincoln, #kittitas, #grant, #douglas, #columbia, #skamania, #wahkiakum {
+	fill:#f36c21;
+}
+/* */
+#mapKey {
+	height:12px;
+	width:100%;
+	margin-top:30px;
+}
+.mapLabel {
+	display:inline-block;
+	width: 16%;
+	height: 12px;
+	float:left;
+}
+.labelLow, .labelMidLowest, .labelMidLow, .labelMidHigh, .labelMidHigher, .labelHighest {
+	padding-top:1em;
+	text-align: center;
+	font-size: 90%;
+	line-height: 1.4em;
+}
+.labelLow {
+	border-top:solid 8px #00a651;
+}
+.labelMidLowest {
+	border-top:solid 8px #47b748;
+}
+.labelMidLow {
+	border-top:solid 8px #8dc73f;
+}
+.labelMidHigh {
+	border-top:solid 8px #f8941d;
+}
+.labelMidHigher {
+	border-top:solid 8px #f6811f;
+}
+.labelHighest {
+	border-top:solid 8px #f36c21;
+}
+.tooltip {
+	display:none;
+	text-align: center;
+	color: #5e6a71;
+	max-width: 300px;
+	min-height: 30px;
+	position: absolute;
+	top:-999em;
+	left:-99em;
+	background: #fff;
+	border: 1px solid #5e6a71;
+	margin: 4px 4px 12px 4px;
+	padding: 8px;
+	border-radius: 5px;
+	z-index:99199;
+}
+.tooltip:after, .tooltip:before {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+.tooltip:after {
+	border-top-color: #ffffff;
+	border-width: 8px;
+	margin-left: -8px;
+}
+.tooltip:before {
+	border-top-color: #6d6d6d;
+	border-width: 9px;
+	margin-left: -9px;
+}
+.tooltip h3, .tooltip h4 {
+	color:#5e6a71;
+}
+.tooltip h3 {
+	background-color: rgba(247,247,247,0.75);
+	font-size:1.2em;
+	padding-top:0;
+	padding-left:0;
+	padding-right:0;
+	padding-bottom:4px;
+	margin-bottom:8px;
+}
+.tooltip h4 {
+	font-size:1.1em;
+	text-transform: capitalize;
+	font-weight: normal;
+	display:block;
+	padding:2px;
+}
+#rdRatio {
+}
+.justice {
+	display:inline-block;
+}
+.resident, .dr{
+	width: 2em;
+	height: 6em;
+	background-repeat: no-repeat;
+	background-position:center;
+	background-size: 100% auto;
+	vertical-align: bottom;
+	margin:.175em;
+	float:left;
+	opacity:0.8;
+	filter:alpha(opacity=80); /* For IE8 and earlier */
+}
+.clip {
+	width:1em;
+	background-size: 200%;
+	background-position: left;
+}
+.resident {
+	background-image: url('../images/elements/resident.png');
+}
+.dr {
+	background-image: url('../images/elements/dr.png');
+}
+#medschoolgrads .nvtooltip {
+	text-align: center;
+}
+
+#lmtAccess {
+	width:100%;
+	height:300px;
+	text-align: center;
+	overflow: hidden;
+	margin-bottom:6em;
+}
+#lmtAccessTwo {
+	width:100%;
+	height:300px;
+	text-align: center;
+	overflow: hidden;
+	margin-bottom:6em;
+}
+.chartWrap {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+/********************
+  Box shadow and border radius styling
+*/
+.nvtooltip.with-3d-shadow, .with-3d-shadow .nvtooltip {
+	-moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+	-webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+	box-shadow: 0 5px 10px rgba(0,0,0,.2);
+
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+/********************
+ * TOOLTIP CSS for SVG graphs
+ */
+.nvtooltip {
+	position: absolute;
+	background-color: rgba(255,255,255,1.0);
+	padding: 1px;
+	border: 1px solid rgba(0,0,0,.2);
+	z-index: 10000;
+	text-align: left;
+	pointer-events: none;
+
+	white-space: nowrap;
+
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+/* Give tooltips that old fade in transition by
+    putting a "with-transitions" class on the container div.
+*/
+.nvtooltip.with-transitions, .with-transitions .nvtooltip {
+	transition: opacity 250ms linear;
+	-moz-transition: opacity 250ms linear;
+	-webkit-transition: opacity 250ms linear;
+
+	transition-delay: 250ms;
+	-moz-transition-delay: 250ms;
+	-webkit-transition-delay: 250ms;
+}
+
+.nvtooltip.x-nvtooltip,
+.nvtooltip.y-nvtooltip {
+	padding: 8px;
+}
+
+.nvtooltip h3 {
+	margin: 0;
+	padding: 4px 12px;
+	line-height: 18px;
+	font-weight: normal;
+	background-color: rgba(247,247,247,0.75);
+	text-align: center;
+
+	border-bottom: 1px solid #ebebeb;
+	-webkit-border-radius: 5px 5px 0 0;
+	-moz-border-radius: 5px 5px 0 0;
+	border-radius: 5px 5px 0 0;
+}
+.nvtooltip p {
+	margin: 0;
+	padding: 0 0;
+	margin:0;
+	text-align: center;
+}
+.nvtooltip span {
+	display: inline-block;
+	margin: 2px 0;
+}
+.nvtooltip table {
+	margin: 6px;
+	border-spacing:0;
+}
+.nvtooltip table td {
+	padding: 2px 9px 2px 0;
+	vertical-align: middle;
+}
+
+.nvtooltip table td.key {
+	font-weight:normal;
+}
+.nvtooltip table td.value {
+	text-align: right;
+	font-weight: bold;
+}
+.nvtooltip table tr.highlight td {
+	padding: 1px 9px 1px 0;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-top-width: 1px;
+}
+.nvtooltip table td.legend-color-guide div {
+	width: 8px;
+	height: 8px;
+	vertical-align: middle;
+}
+.nvtooltip .footer {
+	padding: 3px;
+	text-align: center;
+}
+.nvtooltip-pending-removal {
+	position: absolute;
+	pointer-events: none;
+}
+/********************
+ * SVG CSS
+ */
+svg {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	/* Trying to get SVG to act like a greedy block in all browsers */
+	display: block;
+
+}
+svg text {
+	font: normal 10px #5E6A71;
+	padding:8px;
+}
+svg .title {
+	font: bold 10px #5E6A71;
+}
+.nvd3 .nv-background {
+	fill: white;
+	fill-opacity: 0;
+	/*
+	  pointer-events: none;
+	  */
+}
+.nvd3.nv-noData {
+	font-size: 10px;
+	font-weight: normal;
+}
+/**********
+*  Brush
+*/
+.nv-brush .extent {
+	fill-opacity: .125;
+	shape-rendering: crispEdges;
+}
+/**********
+*  Legend
+*/
+.nvd3 .nv-legend .nv-series {
+	cursor: pointer;
+	font-size:.875em;
+}
+.nvd3 .nv-legend .disabled circle {
+	fill-opacity: 0;
+}
+/**********
+*  Axes
+*/
+.nvd3 .nv-axis {
+	pointer-events:none;
+}
+
+.nvd3 .nv-axis path {
+	fill: none;
+	stroke: #5E6A71;
+	stroke-opacity: .75;
+	shape-rendering: crispEdges;
+}
+.nvd3 .nv-axis path.domain {
+	stroke-opacity: .75;
+}
+.nvd3 .nv-axis.nv-x path.domain {
+	stroke-opacity: 0;
+}
+.nvd3 .nv-axis line {
+	fill: none;
+	stroke: #5E6A71;
+	shape-rendering: crispEdges;
+}
+.nvd3 .nv-axis .zero line,
+	/*this selector may not be necessary*/ .nvd3 .nv-axis line.zero {
+	stroke-opacity: .75;
+}
+.nvd3 .nv-axis .nv-axisMaxMin text {
+	font-weight: normal;
+}
+.nvd3 .x  .nv-axis .nv-axisMaxMin text,
+.nvd3 .x2 .nv-axis .nv-axisMaxMin text,
+.nvd3 .x3 .nv-axis .nv-axisMaxMin text {
+	text-anchor: middle
+}
+/**********
+*  Brush
+*/
+.nv-brush .resize path {
+	fill: #eee;
+	stroke:#5E6A71;
+}
+/**********
+*  Bars
+*/
+.nvd3 .nv-multibar .nv-groups rect,
+.nvd3 .nv-multibarHorizontal .nv-groups rect,
+.nvd3 .nv-discretebar .nv-groups rect {
+	stroke-opacity: 0;
+	fill:#F3874B;
+	transition: fill-opacity 250ms linear;
+	-moz-transition: fill-opacity 250ms linear;
+	-webkit-transition: fill-opacity 250ms linear;
+}
+.nvd3 .nv-multibar .nv-groups rect:hover,
+.nvd3 .nv-multibarHorizontal .nv-groups rect:hover,
+.nvd3 .nv-discretebar .nv-groups rect:hover {
+	fill-opacity: 1;
+}
+.nvd3 .nv-discretebar .nv-groups text,
+.nvd3 .nv-multibarHorizontal .nv-groups text {
+	font-weight: normal;
+	fill: #5E6A71;
+	stroke: #5E6A71;
+}
+.nv-legendWrap {
+	pointer-event:none;
+}
+/***********
+*  Pie Chart
+*/
+.nvd3.nv-pie path {
+	stroke-opacity: 0;
+	transition: fill-opacity 250ms linear, stroke-width 250ms linear, stroke-opacity 250ms linear;
+	-moz-transition: fill-opacity 250ms linear, stroke-width 250ms linear, stroke-opacity 250ms linear;
+	-webkit-transition: fill-opacity 250ms linear, stroke-width 250ms linear, stroke-opacity 250ms linear;
+
+}
+.nvd3.nv-pie .nv-slice text {
+	stroke: #5E6A71;
+	stroke-width: 0;
+}
+.nvd3.nv-pie path {
+	stroke: #fff;
+	stroke-width: 1px;
+	stroke-opacity: 1;
+}
+.nvd3.nv-pie .hover path {
+	fill-opacity: .7;
+}
+.nvd3.nv-pie .nv-label {
+	font-size:.875em;
+	pointer-events: none;
+	display:none;
+}
+.nvd3.nv-pie .nv-label rect {
+	fill-opacity: 0;
+	stroke-opacity: 1;
+}
+.nv-legend-symbol {
+	stroke: #F26D4E !important;
+	stroke-width: 1px !important;
+	stroke-opacity: 1;
+}
+.nv-legend-text {
+	fill: #5E6A71 !important;
+}
+/**********
+* Parallel Coordinates
+*/
+.nvd3 .background path {
+	fill: none;
+	stroke: #5E6A71;
+	stroke-opacity: .4;
+	shape-rendering: crispEdges;
+}
+.nvd3 .foreground path {
+	fill: none;
+	stroke: #5E6A71;
+	stroke-opacity: .7;
+}
+.nvd3 .brush .extent {
+	fill-opacity: .3;
+	stroke: #fff;
+	shape-rendering: crispEdges;
+}
+.nvd3 .axis line, .axis path {
+	fill: none;
+	stroke: #000;
+	shape-rendering: crispEdges;
+}
+.nvd3 .axis text {
+	text-shadow: 0 1px 0 #fff;
+}
+/****
+Interactive Layers
+*/
+.nvd3 .nv-interactiveGuideLine {
+	pointer-events:none;
+}
+.nvd3 line.nv-guideline {
+	stroke: #ccc;
+}
+
+.admin-bar #spine.cropped {
+	height: 230px;
+	min-height: 230px;
+}
